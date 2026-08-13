@@ -133,11 +133,52 @@ header nav a.cv:hover { border-color: var(--nav-on); background: color-mix(in sr
 body.light .theme-btn .sun { display: block; }
 body.light .theme-btn .moon { display: none; }
 
+/* ---------- Mobile menu ----------
+   Below 700px the header cannot hold the text links next to the name,
+   theme switch and CV button, so they move into a panel behind this
+   button. Desktop is untouched: .menu-btn and .menu-panel never show. */
+.menu-btn {
+  display: none; appearance: none; background: transparent; cursor: pointer;
+  border: 1px solid var(--nav-line); border-radius: 4px;
+  width: 34px; height: 34px; padding: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  transition: border-color 0.25s ease;
+}
+.menu-btn span {
+  display: block; width: 15px; height: 1.5px; background: var(--nav);
+  transition: transform 0.3s cubic-bezier(0.16,0.84,0.24,1), opacity 0.2s, background-color 0.35s;
+}
+body.menu-open .menu-btn span:first-child { transform: translateY(3.25px) rotate(45deg); }
+body.menu-open .menu-btn span:last-child  { transform: translateY(-3.25px) rotate(-45deg); }
+body.menu-open .menu-btn { border-color: var(--nav-on); }
+
+.menu-panel {
+  display: none; flex-direction: column;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  padding: 6px var(--gut) 14px;
+}
+.menu-panel a {
+  color: var(--text); font-size: 1.06rem; font-weight: 500;
+  padding: 15px 0; border-bottom: 1px solid var(--line);
+}
+.menu-panel a:last-child { border-bottom: 0; }
+
 @media (max-width: 700px) {
-  header nav { gap: 18px; }
+  header nav { gap: 14px; }
   header nav a:not(.cv):not([aria-label]) { display: none; }
   .brand { font-size: 0.95rem; }
+  .menu-btn { display: flex; }
+  body.menu-open .menu-panel { display: flex; animation: menuIn 0.24s ease both; }
+  /* Header must be opaque while the panel is open, including over the hero. */
+  body.menu-open header.site {
+    position: fixed; background: color-mix(in srgb, var(--bg) 96%, transparent);
+    backdrop-filter: blur(18px);
+    --nav: var(--dim); --nav-on: var(--text); --nav-line: var(--line);
+  }
 }
+@keyframes menuIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 
 /* body scroll state: solid header */
 body.scrolled header.site {
