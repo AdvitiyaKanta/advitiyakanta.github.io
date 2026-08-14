@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://advitiyakanta.github.io/sitemap.xml

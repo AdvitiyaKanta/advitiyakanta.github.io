@@ -1,605 +1,553 @@
-/* ============================================================
-   ADVITIYA SINGH KANTA · PORTFOLIO CONTENT
-   ============================================================
-   This file drives the project pages (project.html).
-   Edit text here, drop images in assets/projects/<slug>/.
-   See UPDATE-GUIDE.md for how to make changes safely.
-   ============================================================ */
-
+/* Evidence-reviewed portfolio content. Keep public claims within the boundaries
+   recorded in EVIDENCE_AND_CLAIMS_AUDIT.md in the delivery package. */
 const SITE = {
   name: "Advitiya Singh Kanta",
   role: "Level Designer",
   location: "Dundee, United Kingdom",
   email: "advitiyakanta@gmail.com",
-  tagline: "I design levels that guide players without words. From 2D layout to playtested blockout, in Unreal Engine 5.",
-  credentials: "7 months professional LD experience · MProf Games Development, Abertay University",
-  links: {
-    linkedin: "https://www.linkedin.com/in/advitiyasinghkanta/"
-  },
-  cv: "assets/cv/Advitiya_Kanta_CV.pdf",
-
+  cv: "assets/downloads/Advitiya-Singh-Kanta-CV.pdf",
   projects: [
-
-    /* ---------------- 1. REVOLVER RIFT (PROFESSIONAL) ---------------- */
     {
       slug: "revolver-rift",
       tier: "professional",
-      badge: "Professional · Kahr Works GmbH",
+      badge: "Professional work · Kahr Works GmbH",
       title: "Revolver Rift",
-      subtitle: "AA PvPvE extraction shooter · Kahr Works GmbH",
-      cardMeta: "7 months (Dec 2024 – Jun 2025) · UE5",
-      card: "More than fifteen compounds blocked out and iterated for an AA extraction shooter in development.",
+      subtitle: "Seven months of commercial Level Design on a UE5 extraction shooter in development",
+      description: "Public-evidence Level Design case study: seven months at Kahr Works on Revolver Rift, using only six UE5 compound blockouts already on the canonical site.",
       hero: "assets/projects/revolver-rift/compound-02.jpg",
-      meta: {
+      heroAlt: "Greybox of a church compound for Revolver Rift",
+      summary: {
+        Context: "Professional studio work on an AA PvPvE extraction shooter in development",
         Role: "Level Designer",
-        Studio: "Kahr Works GmbH, Dornbirn, Austria",
+        Studio: "Kahr Works GmbH",
         Engine: "Unreal Engine 5",
-        Duration: "December 2024 to June 2025",
-        Focus: "Compound layout, navigation, pacing, playtesting"
+        Duration: "7 months · December 2024 to June 2025",
+        Ownership: "2D layouts, compound blockouts, navigation and pacing passes",
+        Constraint: "NDA-limited; only six images already public before this update are shown",
+        Status: "Announced and in development; not presented as a shipped title"
       },
+      skills: ["UE5 blockout", "2D-to-3D spatial design", "Navigation", "Pacing", "Team review"],
       links: [
         { label: "Official game site", url: "https://www.revolver-rift.com/" }
       ],
       sections: [
         {
-          heading: "The project",
+          heading: "Brief and professional context",
           body: [
-            "Revolver Rift is a hardcore PvPvE extraction shooter in development at Kahr Works, built in Unreal Engine 5. I spent seven months there as a Level Designer working on its map spaces.",
-            "In an extraction shooter, the compounds decide the match. Loot, sightlines and risk concentrate in those contested pockets, so every one of them has to ask the player a question: which way in, how loud, and what am I willing to trade for the good loot? I blocked out and iterated <strong>more than fifteen compounds</strong> against that standard."
-          ],
-          images: []
+            "Revolver Rift is a PvPvE extraction shooter in development at Kahr Works. I worked there for seven months as a Level Designer, contributing compound layouts and playable UE5 blockouts.",
+            "Compound spaces concentrate navigation, risk and player contact. I focus here on readable approaches, landmark silhouettes and route structure. Confidential metrics, maps and unapproved process material are not included."
+          ]
         },
         {
           heading: "What I owned",
           body: [
-            "Compound layouts from first sketch to playable blockout. Navigation and pacing passes across the map. Playtest rounds, and the layout changes that followed from what they showed. I worked in a multinational team with weekly level review syncs, which taught me to present layout decisions to leads, defend the ones that mattered, and let go of the ones that did not survive contact with playtesting.",
-            "It also taught me to design inside a performance budget from the first blockout, rather than treating optimization as someone else's cleanup job."
-          ],
-          images: []
+            "I took compound ideas from 2D layout into playable blockout, then revised navigation and pacing through team review. I created more than five compound blockouts across the seven-month placement.",
+            "The detailed briefs, map context, review notes, performance targets and player-eye captures remain under NDA. No new Kahr archive material has been added in this update."
+          ]
         },
         {
-          heading: "Approved blockout work",
+          heading: "Already-public blockouts",
           body: [
-            "Everything below was made with Unreal's native workflows and is cleared for portfolio use. No final game assets are shown, and detailed layouts stay under NDA. I can walk through the process behind them, from reference to 2D layout to iterated blockout, in an interview."
+            "These six views were already public in the canonical portfolio. Captions describe visible spatial intent only; they do not invent a feedback history or performance result."
           ],
           images: [
-            { src: "assets/projects/revolver-rift/compound-01.jpg", caption: "Industrial compound. The chimney is the landmark; the yard forces an open crossing to reach the interior loot." },
-            { src: "assets/projects/revolver-rift/compound-02.jpg", caption: "Church compound. Strong silhouette for orientation, tight interior for close fights, walled grounds that funnel approaches." },
-            { src: "assets/projects/revolver-rift/compound-03.jpg", caption: "Village across terrain. Multiple buildings spread engagement instead of stacking it in one structure." },
-            { src: "assets/projects/revolver-rift/compound-04.jpg", caption: "Farm compound. Open approaches with a hard interior core." },
-            { src: "assets/projects/revolver-rift/compound-05.jpg", caption: "Swamp compound. Water and terrain slow the approach and telegraph movement." },
-            { src: "assets/projects/revolver-rift/compound-06.jpg", caption: "Walled fort compound. One obvious gate, several unobvious ways over the wall." }
+            { src: "assets/projects/revolver-rift/compound-01.jpg", alt: "Industrial compound greybox with chimney landmark and open yard", caption: "Industrial compound: a tall chimney anchors the silhouette while the open yard separates exterior approach from the interior mass." },
+            { src: "assets/projects/revolver-rift/compound-02.jpg", alt: "Church compound greybox with walled grounds", caption: "Church compound: a central landmark and walled grounds give the space a clear long-range read." },
+            { src: "assets/projects/revolver-rift/compound-03.jpg", alt: "Village compound greybox distributed across terrain", caption: "Village compound: several small structures distribute movement across the terrain instead of one dominant building." },
+            { src: "assets/projects/revolver-rift/compound-04.jpg", alt: "Farm compound greybox with open approach and dense core", caption: "Farm compound: open approaches lead into a denser interior cluster." },
+            { src: "assets/projects/revolver-rift/compound-05.jpg", alt: "Waterside compound greybox with buildings across uneven terrain", caption: "Waterside compound: terrain and water define the approach before the building mass takes over." },
+            { src: "assets/projects/revolver-rift/compound-06.jpg", alt: "Fort compound greybox with wall and gate", caption: "Fort compound: the perimeter wall makes the main gate immediately legible while preserving vertical route options." }
+          ]
+        },
+        {
+          heading: "Result and next proof",
+          body: [
+            "The placement is Advitiya's strongest professional credential: sustained Level Design work in a studio pipeline on an in-development commercial title. Because process proof is NDA-limited, the most valuable future addition is one explicitly approved brief-to-revision strip and a short player-eye run."
           ]
         }
-      ]
+      ],
+      credits: {
+        "My work": "2D compound layouts, UE5 blockouts, navigation and pacing passes described above.",
+        "Team work": "Revolver Rift, its systems, final assets and wider world are Kahr Works team work.",
+        "Third-party / marketplace assets": "No new asset-ownership claim is made; only the six blockout views already public are reproduced.",
+        "Client or brief context": "Commercial employment at Kahr Works GmbH for seven months; the title is still in development."
+      }
     },
-
-    /* ---------------- 2. TO PIERCE ETERNITY (STUDIO) ---------------- */
     {
       slug: "to-pierce-eternity",
       tier: "studio",
-      badge: "Studio Project \u00b7 Hyperluminal",
+      badge: "Abertay MProf · Hyper Luminal Games client brief",
       title: "To Pierce Eternity",
-      subtitle: "Level Designer on a sci-fi puzzle horror game, made for Hyperluminal",
-      cardMeta: "12 weeks \u00b7 team of 12 \u00b7 UE5 \u00b7 Released",
-      card: "A derelict space station where the HUD lies and the level is the only thing telling the truth. I owned the player space.",
+      subtitle: "The complete case study: paper plan to UE5 blockout, QA observation and revision",
+      description: "Abertay MProf Level Design case study for a Hyper Luminal Games client brief: spatial planning, UE5 blockout, environmental guidance and evidence-led iteration.",
       hero: "assets/projects/to-pierce-eternity/cover.jpg",
+      heroAlt: "Entity Experimentation Room in the To Pierce Eternity team build",
       video: "cHCa_0P5elA",
-      meta: {
+      summary: {
+        Context: "Abertay MProf client-brief team project for Hyper Luminal Games",
         Role: "Level Designer",
-        Client: "Hyperluminal",
-        Team: "12 (Abertay MProf, DES512)",
+        Team: "12-person multidisciplinary student team",
         Engine: "Unreal Engine 5",
-        Duration: "12 weeks, 2026",
-        Status: "Released, rated 5.0"
+        Duration: "12 weeks · May to August 2026",
+        Ownership: "Player-space planning, every playable-space blockout, spatial integration, chase flow and trap placement",
+        Constraint: "The HUD lies; the environment must remain the player's trustworthy guide",
+        Result: "Completed academic team build; public team build linked below"
       },
+      skills: ["Bubble diagrams", "2D layouts", "UE5 blockout", "Sightlines", "Environmental guidance", "Playtest-led iteration"],
       links: [
-        { label: "Play it on itch.io", url: "https://snakelock.itch.io/to-pierce-eternity" }
+        { label: "Play the team build on itch.io", url: "https://snakelock.itch.io/to-pierce-eternity" },
+        { label: "Download the one-page Level Design sample", url: "assets/downloads/To-Pierce-Eternity-Level-Design-Sample.pdf" }
       ],
       sections: [
         {
-          heading: "The problem",
+          heading: "The design problem: the level is the honest system",
           body: [
-            "A companion AI guides you through your helmet HUD, and the HUD lies. That premise puts the level under load. If a player cannot tell a deliberate lie from a bug, they stop playing and start debugging.",
-            "So the level had one job: <strong>be the only honest system in the game.</strong> Every guidance decision below follows from that constraint. I owned the player space end to end and designed against it."
-          ],
-          images: []
-        },
-        {
-          heading: "Planning the space",
-          body: [
-            "I plan on paper because it forces decisions about order before geometry makes them for me. Hand sketch, then a bubble diagram to test the sequence of beats, then the 2D plan once the flow held.",
-            "The red bars are the important marks. They are no-backtracking points, placed where a player would otherwise retreat to safety and drain the tension I had just built. Cross one and the door seals, so every choice is committed.",
-            "The layout is a loop. You start in the hibernation chamber and end there, and the room reads differently depending on which of three endings you earned."
+            "The companion AI communicates through a helmet HUD, and that HUD lies. If a player cannot separate deliberate deception from a broken game, the premise collapses. The environment therefore had to remain the only trustworthy source of navigation.",
+            "The sightline study below was made before geometry. Pods frame a central object from the entrance; the completed room preserves that visual hierarchy so curiosity, not an objective marker, pulls the player forward."
           ],
           images: [
-            { src: "assets/projects/to-pierce-eternity/layout-paper.jpg", caption: "Paper pass. Room order, safe zones, storytelling rooms and the loop back to the start." },
-            { src: "assets/projects/to-pierce-eternity/bubble-diagram.jpg", caption: "Bubble diagram. Green safe, red puzzle, cyan chase, grey storytelling, orange and purple for the two endings." },
-            { src: "assets/projects/to-pierce-eternity/layout-2d-plan.jpg", caption: "2D plan. Critical path, room types, and the no-backtracking bars that make each commitment permanent." }
+            { src: "assets/projects/to-pierce-eternity/sightline-plan.jpg", alt: "Side-by-side sightline plan and completed Entity Experimentation Room", caption: "Plan against execution: pod placement frames the centre object and one readable light source carries the entrance sightline." }
           ]
         },
         {
-          heading: "Sightlines before geometry",
+          heading: "My ownership and the team boundary",
           body: [
-            "I plan sightlines on paper before primitives go down, because what a player can see from the doorway decides whether they walk in curious or confused.",
-            "In the Entity Experimentation Room the plan was a curiosity hook: pods framing a low centre object, one clear line of sight from the entrance to it, and a light that makes that object the only readable thing in a dark room. The build follows the plan closely enough that you can hold them side by side."
-          ],
-          images: [
-            { src: "assets/projects/to-pierce-eternity/sightline-plan.jpg", caption: "Plan against execution. Pods frame the sightline, a single light makes the centre object the one readable target, and the curiosity hook pulls the player in without a prompt." }
+            "I designed the player space: paper sketch, bubble diagram, digital 2D layout, beats, blockout and the placement of guidance, interactions and chase beats. By Week 8 every playable space was blocked out; from Week 9 I held spatial intent while team-owned art, props and lighting replaced the greybox.",
+            "Puzzle Design and LDD co-authorship had a separate owner. Entity behaviour and HUD systems were programming-owned. Lighting execution, the modular kit, props, UI, decals, audio and other disciplines also had separate owners. Final-build screenshots show the team result, not sole authorship."
           ]
         },
         {
-          heading: "Guidance without a marker",
+          heading: "Plan, scope cut and spatial structure",
           body: [
-            "Hyperluminal's QA lead found the flaw. Three identical doors in a symmetrical room gave her nothing to choose between. The space was asking her to guess and calling it a decision.",
-            "The obvious fix was an objective marker. I refused it. A marker travels through the HUD, and the HUD is untrustworthy by design, so that fix trades the game's core mechanic for a symptom. I put the information in the environment instead: lighting above the doors for the correct and blocked read, and one distinction object per room.",
-            "The rule underneath it is <strong>distinction</strong>. Three identical doors, one differentiator, and players get pulled through without being told. Light does not attract a player; it makes an object readable enough to be chosen. I keep the signal on line and shape, with colour only reinforcing, so the guidance survives a player who cannot separate red from green.",
-            "Two people named the same guide object weeks apart, unprompted: a faculty assessor and the QA lead."
+            "The sequence began on paper, moved into a bubble diagram and then a digital 2D plan before blockout. The scope reduced twice: from five planned puzzle rooms to three at the client pitch, then to two implemented puzzle rooms later in production. I redrew the bubble diagram and layout rather than patching an obsolete plan, keeping the critical path and ending loop legible to the team.",
+            "Red bars on the plan mark no-backtracking thresholds. Crossing one seals the route behind the player, preserving forward momentum and making the final trust choice binding."
           ],
           images: [
-            { src: "assets/projects/to-pierce-eternity/read-leading-lines.jpg", caption: "Diegetic guidance in the maintenance path. Pipes run as leading lines to the correct valve, and the valve is the only lit green element in frame. Nothing in the HUD is doing this work." }
+            { src: "assets/projects/to-pierce-eternity/layout-paper.jpg", alt: "Hand-drawn To Pierce Eternity room sequence and route plan", caption: "Paper pass: room order, safe zones, storytelling rooms and the loop back to the starting chamber." },
+            { src: "assets/projects/to-pierce-eternity/bubble-diagram.jpg", alt: "Colour-coded bubble diagram for To Pierce Eternity", caption: "Revised bubble diagram after the scope cut: safe, puzzle, chase, hallway and storytelling beats separated by function." },
+            { src: "assets/projects/to-pierce-eternity/layout-2d-plan.jpg", alt: "Digital top-down layout for To Pierce Eternity", caption: "Digital 2D plan: critical path, room types and no-backtracking thresholds before blockout." }
           ]
         },
         {
-          heading: "Blockout",
+          heading: "QA observation to design change",
           body: [
-            "I built every playable space: hibernation chamber, three puzzle rooms, two safe rooms, storytelling rooms, the maintenance detour and the Underbelly. It started as one hexagonal room and grew outward against the plan.",
-            "I gave art the scale early on a rough modular kit, so the greybox could be replaced without the layout being redrawn."
+            "On 7 July, a Hyper Luminal Games QA tester found that three identical doors in a symmetrical safe room gave no defensible route choice. An objective marker would have passed through the untrustworthy HUD and weakened the premise.",
+            "On 8 July I changed the environment instead: placeholder door lighting communicated open and blocked reads, while one distinction object in each safe room broke the symmetry. I then applied the same rule to the maintenance path, using pipes as leading lines and colour only as reinforcement."
           ],
-          images: [],
+          table: {
+            headers: ["Observation", "Design decision", "Change", "Why it fits the brief"],
+            rows: [
+              ["Three identical doors made the route a guess", "Keep honest guidance out of the lying HUD", "Door-state lighting plus one distinction object per safe room", "The space supplies the answer without an objective marker"],
+              ["A maintenance objective needed a stronger read", "Use line and shape before colour", "Pipes lead to the correct valve; green light reinforces", "The cue remains readable when colour alone is not"]
+            ]
+          },
+          images: [
+            { src: "assets/projects/to-pierce-eternity/read-leading-lines.jpg", alt: "Maintenance path with pipes leading toward a lit valve", caption: "Maintenance path: pipe direction provides the leading line; green light reinforces rather than carries the route." }
+          ]
+        },
+        {
+          heading: "From 2D layout to playable blockout",
+          body: [
+            "The comparison keeps planning and implementation side by side. The blockout grew from one hibernation chamber into the full playable route; the 2D plans record the room-level intent that the geometry had to preserve."
+          ],
           toggle: {
-            a: {
-              name: "Blockout",
+            blockout: {
+              name: "Blockout progression",
               items: [
-                { src: "assets/projects/to-pierce-eternity/top-01.jpg", caption: "The hibernation chamber as a single hexagonal room." },
-                { src: "assets/projects/to-pierce-eternity/top-02.jpg", caption: "First corridor out, running toward the generator area." },
-                { src: "assets/projects/to-pierce-eternity/top-04.jpg", caption: "Station shape emerging. Puzzle wing, safe room and storytelling rooms in place." },
-                { src: "assets/projects/to-pierce-eternity/top-06.jpg", caption: "Both wings connected, matching the 2D plan room for room." },
-                { src: "assets/projects/to-pierce-eternity/top-08.jpg", caption: "Every playable room built, including the Entity Experimentation Room." },
-                { src: "assets/projects/to-pierce-eternity/top-11.jpg", caption: "Final playable area with the art kit in. Same footprint as the plan." }
+                { src: "assets/projects/to-pierce-eternity/top-01.jpg", alt: "Top-down greybox of the first hibernation chamber", caption: "Hibernation chamber: the first playable room." },
+                { src: "assets/projects/to-pierce-eternity/top-02.jpg", alt: "Top-down greybox extending from the hibernation chamber into a corridor", caption: "The first corridor extends the route toward the generator area." },
+                { src: "assets/projects/to-pierce-eternity/top-04.jpg", alt: "Top-down greybox of the puzzle wing, safe room and storytelling rooms", caption: "Puzzle wing, safe room and storytelling rooms establish the station structure." },
+                { src: "assets/projects/to-pierce-eternity/top-06.jpg", alt: "Top-down greybox showing the two connected station wings", caption: "Both wings connected after the plan revision." },
+                { src: "assets/projects/to-pierce-eternity/top-08.jpg", alt: "Top-down view of the complete playable-space greybox", caption: "Every playable room blocked out, including the Entity Experimentation Room." },
+                { src: "assets/projects/to-pierce-eternity/top-11.jpg", alt: "Top-down final team build following the greybox footprint", caption: "Team art integrated over the same spatial footprint." }
               ]
             },
-            b: {
-              name: "2D Layouts",
+            layouts: {
+              name: "Room layouts",
               items: [
-                { src: "assets/projects/to-pierce-eternity/layout-generator-room.jpg", caption: "Generator room. Power control units, control terminal, sightline blockers, storytelling room off the critical path." },
-                { src: "assets/projects/to-pierce-eternity/layout-lab.jpg", caption: "Laboratory and Entity Experimentation Room. Interactables and narrative props placed against the sightline plan." },
-                { src: "assets/projects/to-pierce-eternity/layout-maintenance.jpg", caption: "Maintenance path. An optional detour that charges traps for a True Ending note." },
-                { src: "assets/projects/to-pierce-eternity/layout-underbelly.jpg", caption: "The Underbelly. Trap types, short circuit station, chase trigger, and the two ending corridors." }
+                { src: "assets/projects/to-pierce-eternity/layout-generator-room.jpg", alt: "Annotated generator-room plan with interaction positions and blockers", caption: "Generator room: interaction positions and sightline blockers." },
+                { src: "assets/projects/to-pierce-eternity/layout-lab.jpg", alt: "Annotated laboratory and Entity-room circulation plan", caption: "Laboratory and Entity Experimentation Room: circulation and narrative placement." },
+                { src: "assets/projects/to-pierce-eternity/layout-maintenance.jpg", alt: "Annotated maintenance-route plan with an optional detour", caption: "Maintenance path: optional detour and guidance route." },
+                { src: "assets/projects/to-pierce-eternity/layout-underbelly.jpg", alt: "Annotated Underbelly chase plan with traps and a final route choice", caption: "Underbelly: traps, chase trigger and final route choice." }
               ]
             }
           }
         },
         {
-          heading: "The Underbelly",
+          heading: "Chase flow, testing and implementation boundary",
           body: [
-            "The chase runs through the Underbelly, entered by elevator so the descent is a one-way commitment. Traps punish the wrong decision rather than the player: static steam damages and slows, valve steam can catch the player or the entity, spilled liquid does the same. One recharge station. The chase triggers five to seven seconds in, before the player feels ready.",
-            "First build, a tester died once, got jumpscared, then sprinted the rest of it untouched. Sprinting was beating the design. I raised entity speed and re-tuned trap timing until running blind gets you caught, which forced the player back into reading the space at speed.",
-            "I scripted this section myself: splines, dialogue triggers and trap logic in Blueprints. The QA lead called it the most engaging part of the game."
+            "I planned the Underbelly chase on paper, built its spatial flow, placed traps, and positioned spline and trigger beats. A 24 July external test exposed that sprinting could bypass the intended reading. The final pass refined trap and slowdown balance so running straight through no longer beat the sequence.",
+            "Entity functionality remained programming-owned. The final image below is an Unreal editor/actor setup view used to place a steam-trap actor against the plan; it is not a Blueprint node graph and is not presented as proof of advanced scripting."
           ],
           images: [
-            { src: "assets/projects/to-pierce-eternity/paper-underbelly.jpg", caption: "Rough plan. Trap positions, one recharge station, a five to seven second entity trigger, and a 1 to 1.5 minute target run." },
-            { src: "assets/projects/to-pierce-eternity/layout-underbelly.jpg", caption: "The plan it became. Trap types by symbol, chase trigger, and the Trust and Don't Trust corridors." },
-            { src: "assets/projects/to-pierce-eternity/final-underbelly-traps.jpg", caption: "In engine. The fastest line is not the safest one." },
-            { src: "assets/projects/to-pierce-eternity/bp-trap-steam.jpg", caption: "Trap logic in Blueprints, with damage and timing exposed so the sequence could be balanced quickly." }
+            { src: "assets/projects/to-pierce-eternity/paper-underbelly.jpg", alt: "Hand-drawn Underbelly chase and trap plan", caption: "Paper chase pass: route, trap positions, recharge point and intended run shape." },
+            { src: "assets/projects/to-pierce-eternity/layout-underbelly.jpg", alt: "Digital Underbelly route and trap layout", caption: "Digital layout: trap types, chase trigger and the final trust choice." },
+            { src: "assets/projects/to-pierce-eternity/final-underbelly-traps.jpg", alt: "Underbelly trap area in the completed team build", caption: "Team build: the fastest line is exposed to the trap read designed into the route." },
+            { src: "assets/projects/to-pierce-eternity/bp-trap-steam.jpg", alt: "Unreal editor view with a steam trap actor selected beside the placement plan", caption: "Editor setup and plan placement, not a Blueprint graph. The steam-trap actor is selected in the level beside the spatial plan." }
           ]
         },
         {
-          heading: "The room that carries the argument",
+          heading: "Basic Level Blueprint flow prototype",
           body: [
-            "Every pod in the Entity Experimentation Room reads green, so green carries no information. Interact with the recharge station and one pod turns red.",
-            "The mechanic doing that is the game's own HUD-obscuring function. The interface shows you the clean version of the room, and the truth only appears once the interface is taken away. That is the whole premise built into one space instead of explained in dialogue.",
-            "From week nine I was also the integration point, holding design intent while the art kit, props and lighting replaced the greybox. Released August 2026, rated 5.0."
+            "For early elevator-to-Underbelly flow testing, I built a small Level Blueprint prototype using paired trigger volumes, player checks and Set Actor Location nodes. Its purpose was to test pacing and transition timing before the final elevator solution existed.",
+            "This is a basic, project-specific flow-test prototype. It is not proof of broader scripting expertise or ownership of the team's gameplay architecture."
           ],
           images: [
-            { src: "assets/projects/to-pierce-eternity/cover.jpg", caption: "Entity Experimentation Room, shipped build. One red pod is the entire reveal." }
+            { src: "assets/projects/to-pierce-eternity/basic-elevator-teleport-blueprint.png", alt: "Basic Unreal Level Blueprint with paired trigger-volume teleport flows for elevator testing", caption: "Basic Level Blueprint flow test: paired trigger overlaps move the player between two temporary elevator endpoints for pacing evaluation." }
           ]
         },
         {
-          heading: "What I took from it",
+          heading: "Result and reflection",
           body: [
-            "I designed with the distinction rule for weeks before I could name it. Naming it changed what I could do with it: apply it deliberately, defend it in review, and hand it to a teammate in one sentence.",
-            "The judgement I would repeat is refusing the objective marker. The cheap fix would have solved the complaint and quietly broken the game."
-          ],
-          images: []
-        },
-        {
-          heading: "Graybox gallery",
-          body: [
-            "Every playable area across the station, lit at graybox so each room could be tested for readability before it was dressed."
-          ],
-          images: [],
-          gallery: [
-            "assets/projects/to-pierce-eternity/gray-01.jpg","assets/projects/to-pierce-eternity/gray-03.jpg",
-            "assets/projects/to-pierce-eternity/gray-04.jpg","assets/projects/to-pierce-eternity/gray-05.jpg",
-            "assets/projects/to-pierce-eternity/gray-06.jpg","assets/projects/to-pierce-eternity/gray-07.jpg",
-            "assets/projects/to-pierce-eternity/gray-08.jpg","assets/projects/to-pierce-eternity/gray-09.jpg"
+            "This is the strongest complete sample in the portfolio because the design chain stays visible: intent, paper plan, 2D structure, blockout, external observation, change and team handoff.",
+            "The decision I would repeat is refusing the objective marker. The useful lesson is narrower than 'UI is bad': when interface reliability is the mechanic, trustworthy spatial information has to live somewhere else."
           ]
         }
-      ]
+      ],
+      credits: {
+        "My work": "Player-space planning, bubble diagram and layouts, every playable-space blockout, spatial integration, chase flow, spline/trigger placement and trap placement.",
+        "Team work": "Puzzle Design and LDD co-authorship, Entity/HUD code, lighting execution, modular art, props, UI, decals and audio had separate owners.",
+        "Third-party / marketplace assets": "Final-build captures contain team and project assets; Advitiya's claim is limited to the spatial work and implementation boundaries described here.",
+        "Client or brief context": "Abertay MProf academic team project responding to a Hyper Luminal Games client brief. This was not employment at Hyper Luminal Games."
+      }
     },
-
-    /* ---------------- 3. HULL & HORIZON ---------------- */
     {
       slug: "hull-and-horizon",
       tier: "studio",
-      badge: "Client Work · V&A Dundee",
-      cardMetaAlt: true,
+      badge: "Abertay MProf · V&A Dundee client brief",
       title: "Hull & Horizon",
-      subtitle: "Lead Level Design & Audio · museum experience for the V&A Dundee",
-      cardMeta: "Feb – May 2026 · UE5 · Released",
-      card: "A first-person Queen Mary deck built for the museum floor and playtested with ten real visitors.",
+      subtitle: "The playtest case study: ten museum-floor sessions translated into concrete revisions",
+      description: "Abertay MProf team project to a V&A Dundee brief: UE5 spatial design, museum constraints and anonymised playtest-to-change evidence.",
       hero: "assets/projects/hull-and-horizon/bow-sunset.jpg",
+      heroAlt: "Bow of the RMS Queen Mary at sunset in the Hull and Horizon team build",
       video: "2T_Sq1BiX0c",
-      meta: {
-        Role: "Lead Level Designer · Audio",
-        Client: "V&A Dundee, Scottish Design Galleries",
-        Team: "Clyde Crew, 5 members (Abertay MProf, DES511)",
+      summary: {
+        Context: "Abertay MProf team project created to a V&A Dundee brief",
+        Role: "Lead Level Designer and Audio Lead",
+        Team: "Team of 5",
         Engine: "Unreal Engine 5",
         Duration: "February to May 2026",
-        Status: "Released. Playtested at the V&A across 10 visitor sessions."
+        Ownership: "Top-deck layout, blockout, pacing, NPC placement, playtest synthesis and audio scope",
+        Constraints: "Broad museum audience, first-time controller users, 5–10 minute experience, no fail state",
+        Result: "10 museum-floor sessions informed a documented revision pass"
       },
+      skills: ["Museum-fit spatial design", "UE5 blockout", "Wayfinding", "Pacing", "Structured observation", "Iteration"],
       links: [
-        { label: "Play it on itch.io", url: "https://leonfnr66.itch.io/hull-horizon" }
+        { label: "Play the team build on itch.io", url: "https://leonfnr66.itch.io/hull-horizon" }
       ],
       sections: [
         {
-          heading: "The brief",
+          heading: "Brief, ownership and constraints",
           body: [
-            "The V&A Dundee wanted an interactive piece for their Scottish Design Galleries. Visitors explore the RMS Queen Mary during her 1934 construction at Clydebank, in first person, for five to ten minutes. No fail states, no pressure, and many visitors would be holding a controller for the first time.",
-            "My design intent fit in one line: <strong>small on a big ship</strong>. The visitor should feel the scale, get pulled forward by curiosity instead of instructions, and leave with one human story they remember."
-          ],
-          images: []
-        },
-        {
-          heading: "Planning the space",
-          body: [
-            "The macro path is a single dense loop. You spawn at the bow, get pulled down a stair to the builder corridor, rejoin stairs up to the top deck, pass through the first-class lounge, and end on the balcony. Nothing exists just because we had room for it.",
-            "The first ten seconds do three jobs the LDD held me to: a landmark in view, a forward pull, one obvious NPC cluster. Stairs carry the vertical language, because for someone who has never played a game, up means important. Interiors were locked at two rooms, each with a teaching job. The builder room covers the labour. The lounge covers the passengers."
-          ],
-          images: [
-            { src: "assets/projects/hull-and-horizon/layout-topdeck-plan.jpg", caption: "2D top-deck layout plan. Primary route, POIs, NPC positions, restricted zones. Target traversal: 3 to 4 minutes walking, 5 to 7 with interactions." },
-            { src: "assets/projects/hull-and-horizon/read-topdeck-goldenpath.jpg", caption: "Top-deck golden path and space read. Central anchor, NPC soft goals, interactable clusters, open-to-tight spatial rhythm." }
+            "The team created a first-person RMS Queen Mary experience for an Abertay client brief from V&A Dundee. It was designed for a broad museum audience, including visitors unfamiliar with controllers, inside a five-to-ten-minute window and without fail states.",
+            "As Lead Level Designer I owned the top-deck route, spatial pacing, landmark hierarchy and NPC placement. I also authored the Level Design documentation and observation structure, coordinated the playtest day and took over Audio Lead responsibilities in Week 6. Another designer shared Level Design coverage and interactable implementation; the wider team owned programming, art, core systems and music."
           ]
         },
         {
-          heading: "Guidance without UI",
+          heading: "Plan and spatial guidance",
           body: [
-            "Sightlines and leading lines. NPC clusters as interest magnets. Warm light against cool. Localised audio. What we refused: quest markers, arrows, tutorial text. The museum tone survives or the whole piece fails.",
-            "Every interaction is one button and at most three sentences, and each answers one question. What is this part? Why does it matter? Who made or used it? Interactions sit where people naturally pause: corners, overlooks, thresholds."
+            "The route uses a clear deck spine, stairs as a vertical cue and NPC clusters as soft goals. Interiors were kept to two focused spaces so each transition had a teaching or narrative job rather than adding breadth for its own sake.",
+            "The plan targeted roughly three to four minutes of walking, extending toward the client window when visitors stopped for interactions. The images below annotate the intended route, hierarchy and focal reads."
           ],
           images: [
-            { src: "assets/projects/hull-and-horizon/read-pov-forward.jpg", caption: "Player POV read. Landmark hierarchy, horizon line, silhouette order, leading lines funnelling the eye to the mast." },
-            { src: "assets/projects/hull-and-horizon/read-focal-corridor.jpg", caption: "Interior corridor focal read. The architecture converges on the focal point. A light lure and familiar-scale props carry the depth." }
+            { src: "assets/projects/hull-and-horizon/layout-topdeck-plan.jpg", alt: "Annotated 2D top-deck plan for Hull and Horizon", caption: "The top-deck plan marks the main route, points of interest, NPC positions and restricted areas before blockout." },
+            { src: "assets/projects/hull-and-horizon/read-pov-forward.jpg", alt: "Annotated player view showing the forward route and landmark order on the ship deck", caption: "The forward player view checks which landmarks appear first and how the ship silhouette pulls attention along the deck." },
+            { src: "assets/projects/hull-and-horizon/read-focal-corridor.jpg", alt: "Annotated greybox corridor showing focal hierarchy and leading lines", caption: "The corridor annotation shows how wall edges, contrast and the opening ahead direct the player's view toward the next space." },
+            { src: "assets/projects/hull-and-horizon/read-topdeck-goldenpath.jpg", alt: "Annotated top-deck greybox showing the intended golden path", caption: "The top-deck read traces the intended route and shows how stairs, deck edges and landmark placement keep the path legible." }
           ]
         },
         {
-          heading: "From 11 beats to 9",
+          heading: "Ten sessions: observation to change",
           body: [
-            "The beat map started at eleven beats. In March I cut it to nine. That tightened the pacing for the five-to-seven minute target and killed the scope risk before it could bite us.",
-            "I also took over audio in week seven, and it turned out to be the same discipline as layout. Where a sound sits and when it triggers changes how people read the space. The four key NPCs got short vocal cues with subtitles. Ambient workers are subtitle only, triggered by proximity, so voice stays reserved for the beats that carry the story."
+            "The team ran ten structured museum-floor sessions at V&A Dundee on 12 March 2026. The public case study reports only aggregate findings; raw sheets, participant descriptions, quotes, ages, timings and photographs remain private.",
+            "The useful signal was mixed: the route itself held, but interaction onboarding and closure did not. The revision pass preserved the spatial spine and changed the cues around it."
+          ],
+          table: {
+            headers: ["Observation", "Evidence", "Design change", "Reason"],
+            rows: [
+              ["Wayfinding held", "No recorded spatial backtracking or route breakdown across 10 sessions", "Kept the mast, deck spine and stair hierarchy", "Preserve the part already communicating clearly"],
+              ["Beat 2 was skipped", "Repeated in the structured observation synthesis", "Added a note object before the work area", "Create a pause and attention cue without rebuilding the route"],
+              ["Controls and the persistent prompt caused confusion", "Control friction and repeated-button behaviour appeared in some sessions", "Added a 6-second movement tutorial and made the prompt contextual", "Reduce first-time controller ambiguity"],
+              ["NPC moments carried attention", "NPC encounters were the strongest repeated engagement points", "Expanded the roster from 3 to 8", "Use characters as spatial and narrative anchors"],
+              ["The build had no clear ending", "Sessions required a team member to tell visitors the experience had ended", "Added a quiet horizon outro", "Signal closure without breaking the museum tone"]
+            ]
+          }
+        },
+        {
+          heading: "Iteration and result",
+          body: [
+            "Earlier in production I condensed the beat map from eleven beats to nine to protect the visitor-time target. After the museum test, the note, contextual prompt, short movement tutorial, expanded NPC roster and outro addressed observed problems without discarding the route that had worked.",
+            "The project shows how I used structured observation to make specific Level Design decisions after a museum-floor test. It does not claim universal accessibility expertise or a permanent V&A installation."
           ],
           images: [
-            { src: "assets/projects/hull-and-horizon/progression-week5-week12.jpg", caption: "Week 5 blockout against week 12 finalisation. Same bow, same read, everything tightened." }
+            { src: "assets/projects/hull-and-horizon/progression-week5-week12.jpg", alt: "Side-by-side Hull and Horizon views comparing the Week 5 blockout with the Week 12 team-build state", caption: "Week 5 and Week 12 comparison: the route and major spatial decisions remain visible as the team build develops around the blockout." }
           ]
-        },
-        {
-          heading: "Playtesting at the V&A, 10 real visitor sessions",
-          body: [
-            "On 12 March we tested on the museum floor with ten visitors across a wide age range, one structured observation sheet per session so the data stayed comparable.",
-            "What held: wayfinding worked in all ten sessions. Nobody got lost, nobody backtracked. The mast pulled attention, the deck spine gave direction, and Sir John Brown stopped every single visitor who reached him. The core bet paid off. Composition and NPC placement can replace UI signposting.",
-            "What failed: visitors walked straight through Beat 2 without stopping. Older visitors struggled with the controls, and one assumed the always-visible interact prompt needed constant pressing. Worst of all, there was no ending. Every session had to be closed by a team member standing next to the visitor."
-          ],
-          images: []
-        },
-        {
-          heading: "What changed and why",
-          body: [
-            "Beat 2 got a note object that pulls the player right before the work area. The geometry never changed. One object does the work. The interact prompt became contextual, appearing only near key objects. A six-second movement tutorial now shows on entry, a fix the Session 10 visitor proposed themselves. And the NPC roster grew from three to eight, because the data said NPC encounters were the strongest moments in the level.",
-            "The missing ending became a quiet outro. Four subtitle lines fade in over the horizon, closing on the ten thousand workers and job number 534, both sourced from our research dossier. I chose reflection over a cutscene because the visitor should end where the builders stood, looking out from the ship they built."
-          ],
-          images: [
-            { src: "assets/projects/hull-and-horizon/shot-08.jpg", caption: "Post-playtest build. The deck at sunset." },
-            { src: "assets/projects/hull-and-horizon/shot-13.jpg", caption: "First-class lounge interior, the reflective beat." }
-          ]
-        },
-        {
-          heading: "In-engine gallery",
-          body: [],
-          gallery: [
-            "assets/projects/hull-and-horizon/bow-sunset.jpg","assets/projects/hull-and-horizon/shot-01.jpg",
-            "assets/projects/hull-and-horizon/shot-02.jpg","assets/projects/hull-and-horizon/shot-03.jpg",
-            "assets/projects/hull-and-horizon/shot-04.jpg","assets/projects/hull-and-horizon/shot-05.jpg",
-            "assets/projects/hull-and-horizon/shot-06.jpg","assets/projects/hull-and-horizon/shot-07.jpg",
-            "assets/projects/hull-and-horizon/shot-09.jpg","assets/projects/hull-and-horizon/shot-10.jpg",
-            "assets/projects/hull-and-horizon/shot-11.jpg","assets/projects/hull-and-horizon/shot-12.jpg",
-            "assets/projects/hull-and-horizon/shot-14.jpg","assets/projects/hull-and-horizon/shot-15.jpg",
-            "assets/projects/hull-and-horizon/shot-16.jpg"
-          ],
-          images: []
         }
-      ]
+      ],
+      credits: {
+        "My work": "Lead Level Design for the top-deck route, blockout, pacing, NPC placement, documentation, playtest synthesis and the Audio Lead scope described above.",
+        "Team work": "Another designer shared Level Design/interactable coverage; programming, 3D art, core game systems and music were team-owned.",
+        "Third-party / marketplace assets": "Final-build captures include team and project assets; only Advitiya's spatial, documentation, test-synthesis and specified audio work is claimed.",
+        "Client or brief context": "Abertay MProf academic team project created to a V&A Dundee brief. This was not employment at V&A Dundee or a permanent installation."
+      }
     },
-
-    /* ---------------- 4. GOODBABIES ---------------- */
     {
       slug: "goodbabies",
       tier: "abertay",
-      badge: "Team Project · Abertay",
+      badge: "Abertay MProf team prototype",
       title: "GoodBabies",
-      subtitle: "Level Design · social-deception game, 10-week UE5 prototype",
-      cardMeta: "10 weeks · team of 6 · UE 5.6",
-      card: "One room, one bouncer, constant pressure. Social deception at the Baby Mafia's card table.",
-      hero: "assets/projects/goodbabies/cover.jpg",
+      subtitle: "Rapid Level Design for a fixed-view social-deception prototype",
+      description: "A 10-week Unreal Engine 5.6 team prototype showing rapid layout, fixed-view readability, threat staging and beat-mapped pacing.",
+      hero: "assets/projects/goodbabies/blockout-day2.jpg",
+      heroAlt: "Early GoodBabies room blockout around the card table",
       video: "eWa8z-YIEco",
-      meta: {
+      summary: {
+        Context: "Abertay MProf team prototype",
         Role: "Level Designer",
-        Team: "6 members (Abertay MProf, DES510)",
+        Team: "6 people",
         Engine: "Unreal Engine 5.6",
         Duration: "10 weeks",
-        Status: "Released on itch.io, rated 5.0"
+        Ownership: "Room layout, blockout progression, fixed-view readability and pacing support",
+        Evidence: "Paper plan, 2D layout and staged blockout images",
+        Status: "Public prototype on itch.io; shown here as a short team project"
       },
+      skills: ["Rapid prototyping", "Fixed-view composition", "Threat staging", "Pacing", "Team collaboration"],
       links: [
-        { label: "Play it on itch.io", url: "https://colranestudios.itch.io/goodbabies" }
+        { label: "Play the team prototype on itch.io", url: "https://colranestudios.itch.io/goodbabies" }
       ],
       sections: [
         {
-          heading: "One room, all tension",
+          heading: "Design problem",
           body: [
-            "You are an informant inside the Bambino Crime Family, recording incriminating table talk through the baby monitor on your chest while playing cards to stay alive. Seated gameplay, limited movement, a single interior.",
-            "The whole level is one room, which means the room has to do everything. My core design question: <strong>how can the environment reinforce tension without overwhelming the player?</strong> Readability for a fixed POV, lighting that steers focus, and threat placement that shapes decisions all follow from it."
+            "The player remains seated at a card table while social-deception events unfold around one room. With limited movement, the camera frame becomes the level: primary interactions must stay readable while threats remain present at the edge of attention."
           ],
           images: [
-            { src: "assets/projects/goodbabies/rough-plan-paper.jpg", caption: "First pass on paper: the nursery as a card den. Window, RC train, clock, toys and the fly event already placed around the table." },
-            { src: "assets/projects/goodbabies/layout-2d-plan.jpg", caption: "2D layout plan. Player anchor, opponents, bouncer route, distraction events, storytelling elements." }
+            { src: "assets/projects/goodbabies/rough-plan-paper.jpg", alt: "Hand-drawn GoodBabies room plan around a card table", caption: "Paper pass: card-table anchor, surrounding events and threat route." },
+            { src: "assets/projects/goodbabies/layout-2d-plan.jpg", alt: "Annotated 2D GoodBabies room layout", caption: "2D plan: player anchor, opponents, bouncer route, distractions and storytelling elements." }
           ]
         },
         {
-          heading: "Blocking it out, day by day",
+          heading: "Rapid blockout progression",
           body: [
-            "The room went from massing to final inside a week, and every day had one job. Day 2 locked the table as the anchor and used furniture to break sightlines. Day 3 drew the bouncer's patrol directly on the floor, before he existed as a character, so his pressure could be tuned as a route rather than a performance. Day 5 was the lighting pass: one warm source over the table, danger pushed to the edges. The final blockout dressed the space over the same footprint."
+            "The room moved from massing to a dressed team build across a short iteration sequence. The table remained the visual anchor; furniture broke long sightlines, and the bouncer route was drawn and walked before character implementation."
           ],
           images: [
-            { src: "assets/projects/goodbabies/blockout-day2.jpg", caption: "Day 2. Massing locked: table anchor, furniture as sightline breaks, opponents seated." },
-            { src: "assets/projects/goodbabies/blockout-day3-patrol.jpg", caption: "Day 3. The bouncer's patrol route drawn on the floor and walked before the character existed." },
-            { src: "assets/projects/goodbabies/blockout-day3-top.jpg", caption: "Day 3, cutaway view. The full route reads at a glance: door, bar, table orbit." },
-            { src: "assets/projects/goodbabies/blockout-day5-lighting.jpg", caption: "Day 5. Lighting pass: one warm source owns the table, the rest of the room falls away." },
-            { src: "assets/projects/goodbabies/blockout-final.jpg", caption: "Final blockout, dressed. Bar, curtain, props in place over the unchanged footprint." },
-            { src: "assets/projects/goodbabies/blockout-progression.jpg", caption: "The whole arc in one panel: blockout to playable space across iterations." }
+            { src: "assets/projects/goodbabies/blockout-day2.jpg", alt: "Day 2 GoodBabies room blockout", caption: "Day 2: table anchor and furniture massing." },
+            { src: "assets/projects/goodbabies/blockout-day3-patrol.jpg", alt: "Bouncer patrol route drawn on the GoodBabies blockout floor", caption: "Day 3: patrol route tested as spatial pressure before character implementation." }
           ]
         },
         {
-          heading: "Designing the POV",
+          heading: "What this sample demonstrates",
           body: [
-            "With the player seated, the camera frame is the level. I cleared the left of the frame to cut cognitive load, anchored the cards and key interactions in the centre, and dimmed the periphery so the table owns attention. The bouncer and the threat cues stay alive at the edge of vision, which is where pressure belongs.",
-            "The bouncer stands where you can always half-see him. Triangular bunting reads as quiet aggression, red light signals danger, and his oversized shadow does the intimidation for him. I tested his position until he pressured the player without ever blocking the main interactions."
-          ],
-          images: [
-            { src: "assets/projects/goodbabies/read-player-pov-v2.jpg", caption: "Player POV analysis. Soft light marks the safe zone, the left of frame stays quiet, the background is dimmed to hold focus, and the gameplay rhythm centres on the primary interaction zone." },
-            { src: "assets/projects/goodbabies/read-bouncer-tension.jpg", caption: "Bouncer placement analysis. Triangle bunting as threat signal, red light as danger, constant pressure without stealing focus, the shadow doing the intimidation." }
-          ]
-        },
-        {
-          heading: "Pacing as a conversation",
-          body: [
-            "I built the beat map like a conversation between tension and relief. Calm early beats teach the cards and the suspicion system. Mid-game beats stack distractions: the fly, bouncer passes, item cues. The high-tension beats make you multitask until the release. The bouncer ends up predictable enough to feel fair and unpredictable enough to stay dangerous.",
-            "I also supported onboarding. Flashcards land at the moment of interaction, popups arrive in low-pressure beats, and the intro videos cover the rules of danger before play starts."
-          ],
-          images: [
-            { src: "assets/projects/goodbabies/pov-cards.jpg", caption: "In play. Cards centred, opponents in frame, the room dark beyond the table light." },
-            { src: "assets/projects/goodbabies/shot-01.jpg", caption: "At the table with the Bambino family." }
+            "GoodBabies is supporting evidence for rapid prototyping, fixed-view composition, pacing intent and team work. It is not presented as balance telemetry or commercial work."
           ]
         }
-      ]
-    },
-
-    /* ---------------- 5. BABY'S FIRST TOWER DEFENCE ---------------- */
-    {
-      slug: "babys-first-tower-defence",
-      tier: "abertay",
-      badge: "Game Jam · Abertay",
-      title: "Baby's First Tower Defence",
-      subtitle: "Level Design · snowbound arena, 2-week UE5 prototype",
-      cardMeta: "2 weeks · team of 6 · UE5",
-      card: "An open snow arena where terrain elevation and a central landmark keep the space readable.",
-      hero: "assets/projects/babys-first-tower-defence/cover.jpg",
-      video: "-KdVIYtmypk",
-      meta: {
-        Role: "Level Designer",
-        Team: "6 members (Abertay MProf, DES510 game jam)",
-        Engine: "Unreal Engine 5",
-        Duration: "2 weeks",
-        Status: "Released on itch.io"
-      },
-      links: [
-        { label: "Play it on itch.io", url: "https://colranestudios.itch.io/babys-first-tower-defense" }
       ],
-      sections: [
-        {
-          heading: "The opposite problem",
-          body: [
-            "GoodBabies was one tight interior. This was the deliberate opposite: an open outdoor arena where flow comes from terrain, distance and landmarks instead of walls.",
-            "I designed the full top-down layout. Forts placed for <strong>triangular coverage</strong> so no lane goes undefended and no fort defends alone. Natural barriers funnel players toward the centre. Enemy spawns and paths read at a glance, and the central fort is the landmark that kills disorientation. I mapped player aim ranges against the layout so every engagement distance stays fair."
-          ],
-          images: [
-            { src: "assets/projects/babys-first-tower-defence/layout-2d-plan.jpg", caption: "2D layout plan. Forts, combat hotspots, enemy spawns, aim ranges, train path, elevation changes." }
-          ]
-        },
-        {
-          heading: "Terrain does the work",
-          body: [
-            "A flat playground became a layered arena. The terrain forms a bowl: mountains and tree lines contain the space, elevation defines vantage points and enemy approach directions, and slopes create the chokepoints walls would normally provide. Height differences let players predict enemy movement before it happens.",
-            "The dressing keeps the fiction light without costing legibility. Snowfall, log cover and the schoolhouse anchor the scene while lanes and spawns stay readable in the middle of a fight."
-          ],
-          images: [
-            { src: "assets/projects/babys-first-tower-defence/v2-blockout-ground.jpg", caption: "Blockout at ground level. The building ring contains the arena; log cover breaks the open ground into approaches." },
-            { src: "assets/projects/babys-first-tower-defence/v2-dusk.jpg", caption: "Dressed arena at dusk. The schoolhouse anchors one end and gives every lane a bearing." },
-            { src: "assets/projects/babys-first-tower-defence/v2-arena-overview.jpg", caption: "Full arena overview. The terrain bowl, the tree ring, and the defended centre it all funnels toward." }
-          ]
-        }
-      ]
+      credits: {
+        "My work": "Room layout, Level Design blockout, fixed-view readability and pacing support described above.",
+        "Team work": "Gameplay systems, characters, final art, UI, audio and the wider prototype were team-owned.",
+        "Third-party / marketplace assets": "Final-build visuals are not presented as Advitiya's art work; the claim is limited to Level Design.",
+        "Client or brief context": "Abertay MProf academic team prototype with no external client employment claim."
+      }
     },
-
-    /* ---------------- 6. MAHARAJA'S PALACE ---------------- */
     {
       slug: "maharajas-palace",
       tier: "personal",
-      badge: "Multiplayer Level",
+      badge: "Personal multiplayer spatial study",
       title: "Maharaja's Palace",
-      subtitle: "Tactical FPS multiplayer map · 1920s India",
-      cardMeta: "Solo project · UE5",
-      card: "A competitive compound where real palace architecture produces the chokepoints.",
+      subtitle: "A UE5 blockout study in route choice, landmarks and counterable height",
+      description: "A personal UE5 multiplayer spatial study using palace architecture to explore routes, landmarks and vertical positioning.",
       hero: "assets/projects/maharajas-palace/aerial-full.jpg",
-      video: "kElo5Ceq0zA",
-      meta: {
-        Role: "Level Designer (solo)",
+      heroAlt: "Aerial view of the Maharaja's Palace UE5 blockout",
+      summary: {
+        Context: "Personal spatial-design study",
+        Role: "Level Designer · solo",
         Engine: "Unreal Engine 5",
-        Type: "Competitive multiplayer, tactical FPS",
-        Setting: "India, 1920s"
+        Type: "Tactical-FPS-inspired multiplayer blockout",
+        Ownership: "Reference, paper plan, route structure and greybox",
+        Focus: "Landmarks, route choice, vertical positions and Indian palace forms",
+        "Evidence gap": "No multiplayer telemetry, balance test or playable download is supplied"
       },
+      skills: ["Spatial planning", "Landmarks", "Route choice", "Verticality", "Cultural reference"],
       links: [],
       sections: [
         {
-          heading: "The design problem",
+          heading: "Design intent",
           body: [
-            "Build a tight, compound-style multiplayer map for a tactical FPS where no position feels overpowered. And make 1920s India carry the combat rather than decorate it.",
-            "Controlled vantage points sit against multiple entry and exit routes. Every contested area has a flank, so movement beats camping. Rooftops and balconies give real advantage but stay counterable from at least one angle. Height is a tool here, not a throne."
+            "The study asks how palace courtyards, colonnades and stepped roofs can produce a readable multiplayer structure rather than act as decoration. The paper plan maps routes, cover intent and contested areas before the blockout."
           ],
           images: [
-            { src: "assets/projects/maharajas-palace/layout-2d-plan.jpg", caption: "Hand-drawn 2D plan at 100-metre scale. Red traces intended paths, orange marks chokepoints, green marks cover. Sniper-risk entries sit left and right, and the quality loot is placed deep inside the palace so players must cross the compound to earn it." }
+            { src: "assets/projects/maharajas-palace/layout-2d-plan.jpg", alt: "Hand-drawn Maharaja's Palace route and cover plan", caption: "2D plan: intended routes, chokepoints, cover and the central palace objective." }
           ]
         },
         {
           heading: "From plan to blockout",
           body: [
-            "The February greybox settled massing and proportions. By March the blockout carried a full colour language: green for cover, yellow for climbable and vault surfaces. You can read a lane's risk from its colours before you commit to it.",
-            "The palace itself is the macro landmark. Its dome breaks the skyline from every lane, so players always know where they are without a minimap doing the thinking for them."
+            "The palace dome acts as the macro landmark. Rooftops and balconies introduce height while ground routes and connecting paths keep elevated positions from becoming the only way to read the map.",
+            "These images demonstrate spatial intent and UE5 greybox craft. Without player data, they do not prove competitive balance."
           ],
           images: [
-            { src: "assets/projects/maharajas-palace/greybox-early.jpg", caption: "Early greybox, February. Massing and proportions locked before any route work." },
-            { src: "assets/projects/maharajas-palace/aerial-topdown.jpg", caption: "Top-down of the finished blockout. The outer ring of buildings feeds three lanes into the central courtyard." },
-            { src: "assets/projects/maharajas-palace/blockout-walkway.jpg", caption: "Rooftop walkway. Yellow marks the climbable route, green the cover along it. The walkway trades exposure for a sightline into two lanes." },
-            { src: "assets/projects/maharajas-palace/blockout-tower-route.jpg", caption: "Tower and bridge route. A vertical vault path connects courtyard to upper ring without creating a dominant perch." },
-            { src: "assets/projects/maharajas-palace/blockout-entry-cover.jpg", caption: "Side entry at ground level. Hard cover immediately inside the gate so entering players are not free kills." },
-            { src: "assets/projects/maharajas-palace/blockout-bus-cover.jpg", caption: "Vehicle cover breaking an open lane into two survivable halves." },
-            { src: "assets/projects/maharajas-palace/blockout-courtyard.jpg", caption: "Central courtyard, the contested ground. Canopy and tower give partial height without owning the space." }
+            { src: "assets/projects/maharajas-palace/greybox-early.jpg", alt: "Early greybox massing for Maharaja's Palace", caption: "Early massing and proportion pass." },
+            { src: "assets/projects/maharajas-palace/aerial-topdown.jpg", alt: "Top-down view of the Maharaja's Palace blockout", caption: "Top-down blockout: outer structures feed routes toward the courtyard." },
+            { src: "assets/projects/maharajas-palace/blockout-walkway.jpg", alt: "Elevated walkway route in Maharaja's Palace", caption: "Elevated walkway: a visible high route balanced by exposure." },
+            { src: "assets/projects/maharajas-palace/blockout-courtyard.jpg", alt: "Central courtyard in the Maharaja's Palace blockout", caption: "Central courtyard as contested spatial anchor." }
           ]
-        },
-        {
-          heading: "Authenticity as level design",
-          body: [
-            "The layout borrows from real palace architecture: courtyards, colonnades, stepped rooflines. Those forms earn their place, because they produce the sightline breaks, chokepoints and rotation loops the fights need. The map reads as a place first and an arena second."
-          ],
-          images: []
         }
-      ]
+      ],
+      credits: {
+        "My work": "Reference selection, paper plan, route structure and UE5 blockout.",
+        "Team work": "Solo Level Design study; no team-production claim.",
+        "Third-party / marketplace assets": "Advitiya owns the self-directed study and every image published here; no client or team ownership is implied.",
+        "Client or brief context": "Self-directed personal project with no commercial client."
+      }
     },
-
-    /* ---------------- 7. TLOU-INSPIRED DAM LEVEL ---------------- */
-    {
-      slug: "tlou-dam-level",
-      tier: "personal",
-      badge: "Singleplayer Level",
-      title: "The Dam",
-      subtitle: "TLoU-inspired stealth and combat level · full blockout in 7 days",
-      cardMeta: "Solo project · 2 weeks · UE5",
-      card: "Stealth, combat and traversal across a militia-held dam. Blocked out in seven days.",
-      hero: "assets/projects/tlou-dam-level/dam-overview.jpg",
-      video: "b7awn57DIU8",
-      meta: {
-        Role: "Level Designer (solo)",
-        Engine: "Unreal Engine 5",
-        Type: "Singleplayer. Stealth, combat, traversal.",
-        Constraint: "2 weeks total, blockout at proper scale in 7 days"
-      },
-      links: [],
-      sections: [
-        {
-          heading: "The constraint was the point",
-          body: [
-            "I gave myself two weeks, with the full blockout at proper scale in the first seven. Real production moves fast and I wanted proof I can hold quality at that speed.",
-            "The level follows Ethan Graves, a former army sniper, crossing a militia-held dam where the infected are used as living shields. Stealth, combat and traversal interleave across the dam's height, and the beat order existed before any geometry did."
-          ],
-          images: [
-            { src: "assets/projects/tlou-dam-level/bubble-diagram.jpg", caption: "Bubble diagram from day one. Mechanics introduction, a small stealth challenge, traversal with storytelling, an enforced detour, combat, then the reward." },
-            { src: "assets/projects/tlou-dam-level/dam-overview.jpg", caption: "The dam top against the ruined skyline. The distant towers give the player a constant orientation reference across the whole crossing." }
-          ]
-        },
-        {
-          heading: "Guidance without colour-coding",
-          body: [
-            "No yellow paint. Light, silhouette and geometry do the guiding, and the enemies force the choices. The goal was a space that stays believable while the player always, quietly, knows where to go.",
-            "The route reads through framing and contrast instead. A torn fence frames the next space before you commit to it. A sunlit wall pulls the eye down the correct street. Water level and railings tell you where you can drop and where you cannot."
-          ],
-          images: [
-            { src: "assets/projects/tlou-dam-level/fence-framing.jpg", caption: "The fence tear frames the route ahead. The player reads the destination before deciding how loudly to reach it." },
-            { src: "assets/projects/tlou-dam-level/street-canyon.jpg", caption: "Abandoned cars stagger the street into cover beats, and the lit far wall pulls the eye down the intended route." }
-          ]
-        },
-        {
-          heading: "Blockout gallery",
-          body: [],
-          gallery: [
-            "assets/projects/tlou-dam-level/sunset-approach.jpg",
-            "assets/projects/tlou-dam-level/courtyard-threat.jpg",
-            "assets/projects/tlou-dam-level/inner-courtyard.jpg",
-            "assets/projects/tlou-dam-level/climb-route.jpg",
-            "assets/projects/tlou-dam-level/water-traversal.jpg"
-          ],
-          images: []
-        }
-      ]
-    },
-
-    /* ---------------- 8. PROMISED NIGHT ---------------- */
     {
       slug: "promised-night",
       tier: "personal",
-      badge: "Personal Project",
+      badge: "Personal horror spatial study",
       title: "Promised Night",
-      subtitle: "Psychological horror level · exploration and light-led guidance",
-      cardMeta: "Solo project · UE5",
-      card: "Horror in an Indian haveli where moonlight does the wayfinding.",
-      hero: "assets/projects/promised-night/shrine-reveal.jpg",
+      subtitle: "An Indian haveli blockout exploring environmental guidance and tension",
+      description: "A personal UE5 horror spatial study using an Indian haveli, looping routes and light-led composition.",
+      hero: "assets/projects/promised-night/blockout-floorplan.jpg",
+      heroAlt: "Top-down UE5 blockout of the Promised Night haveli",
       video: "mmU2tAEojBs",
-      meta: {
-        Role: "Level Designer (solo)",
+      summary: {
+        Context: "Personal Level Design study",
+        Role: "Level Designer · solo",
         Engine: "Unreal Engine 5",
-        Type: "Singleplayer, psychological horror",
-        Setting: "An Indian haveli at night",
-        Focus: "Exploration, light-led guidance, tension pacing"
+        Type: "Singleplayer psychological-horror blockout",
+        Ownership: "Paper plan, objective flow, blockout and lighting intent",
+        Focus: "Exploration, route loops, environmental guidance and tension pacing",
+        "Evidence gap": "No external playtest data is supplied"
       },
+      skills: ["Paper planning", "Route loops", "Environmental guidance", "Pacing", "Setting-led spatial design"],
       links: [],
       sections: [
         {
-          heading: "Fear needs readable space",
+          heading: "Planning the haveli",
           body: [
-            "Horror fails when players get lost for the wrong reasons. Promised Night uses locked doors and blocked paths to force deliberate exploration, moonlight through windows as the quiet guide, and multi-level spaces so movement feels natural. Keys, notes and interactables deepen the tension. Flickering lights and audio shifts keep it unpredictable, on purpose.",
-            "The setting is an Indian haveli at night, which gives the horror unfamiliar architecture: inner courtyards, long connecting halls, rooms that loop back on themselves. The building itself is part of the threat."
+            "The paper plan maps rooms, locked doors, stairs, keys and return paths before the engine pass. A hybrid flow map then layers objectives, blocked routes, storytelling beats and scare intent over the same structure."
           ],
           images: [
-            { src: "assets/projects/promised-night/layout-pencil-plan.jpg", caption: "First pass on paper. Rooms, locked doors, stairs and key placements, with the legend worked out before touching the engine." },
-            { src: "assets/projects/promised-night/layout-hybrid-map.jpg", caption: "Hybrid flow and objective map of the haveli's first floor. Start point, blocked paths, locked doors, objectives, storytelling beats, scary encounters and backtracking routes on one sheet." }
+            { src: "assets/projects/promised-night/layout-pencil-plan.jpg", alt: "Hand-drawn floor plan for the Promised Night haveli", caption: "Paper plan: rooms, doors, stairs and key placements." },
+            { src: "assets/projects/promised-night/layout-hybrid-map.jpg", alt: "Promised Night objective and route-flow map", caption: "Hybrid map: objectives, blocked paths, storytelling beats and return routes." }
           ]
         },
         {
-          heading: "Building the haveli",
+          heading: "Light-led composition",
           body: [
-            "The plan went into UE5 as a full floorplan blockout first, checked from above like a dollhouse, then lit scene by scene. Light does the guiding and the frightening in the same pass: a red-lit shrine pulls you across a dark hall, a flashlight beam turns a dining room into a corridor of guesses."
+            "The study uses moonlight, warm focal points and hard shadow to create intended reads inside a looping haveli. The images show composition intent, not validated wayfinding outcomes."
           ],
           images: [
-            { src: "assets/projects/promised-night/blockout-floorplan.jpg", caption: "The haveli floorplan blocked out in engine, viewed from above. The pencil plan, made walkable." },
-            { src: "assets/projects/promised-night/shrine-reveal.jpg", caption: "The shrine reveal. One warm red light source in a dark room, and the player cannot look anywhere else." },
-            { src: "assets/projects/promised-night/dining-dark.jpg", caption: "The dining hall by flashlight. Long table, hard shadows, one readable exit." },
-            { src: "assets/projects/promised-night/table-candles.jpg", caption: "Candle-lit table beat. Small pools of light stage the room into steps." },
-            { src: "assets/projects/promised-night/cells-scene.jpg", caption: "The cells. The flashlight finds the blood before it finds the way out." }
+            { src: "assets/projects/promised-night/blockout-floorplan.jpg", alt: "Top-down UE5 blockout of the Promised Night haveli", caption: "UE5 floor-plan blockout translated from the paper layout." }
           ]
         }
-      ]
+      ],
+      credits: {
+        "My work": "Paper plan, objective flow, blockout and lighting/composition intent.",
+        "Team work": "Solo Level Design study; no team-production claim.",
+        "Third-party / marketplace assets": "Any final visual assets are contextual and not claimed as Advitiya's 3D art work.",
+        "Client or brief context": "Self-directed personal project with no commercial client."
+      }
+    },
+    {
+      slug: "babys-first-tower-defence",
+      tier: "archive",
+      badge: "Further work · two-week Abertay game jam",
+      title: "Baby's First Tower Defence",
+      subtitle: "A short team-jam arena study, retained as early process evidence",
+      description: "Earlier two-week UE5 team-jam project showing a 2D arena plan, terrain funnel intent and landmark-based readability.",
+      hero: "assets/projects/babys-first-tower-defence/layout-2d-plan.jpg",
+      heroAlt: "Annotated 2D snow-arena plan for Baby's First Tower Defence",
+      video: "-KdVIYtmypk",
+      summary: {
+        Context: "Abertay MProf two-week team game jam",
+        Role: "Level Designer",
+        Team: "6 people",
+        Engine: "Unreal Engine 5",
+        Ownership: "2D arena layout and blockout intent",
+        Focus: "Terrain funnel, elevation and a central landmark",
+        "Evidence gap": "No balance telemetry, structured test result or encounter data is supplied"
+      },
+      skills: ["Rapid layout", "Terrain funnel intent", "Landmarks", "Team jam scope"],
+      links: [
+        { label: "Play the team prototype on itch.io", url: "https://colranestudios.itch.io/babys-first-tower-defense" }
+      ],
+      sections: [
+        {
+          heading: "Design intent",
+          body: [
+            "The top-down plan uses terrain elevation, an outer tree/mountain ring and a central structure to organise an open arena. This page preserves the project as early rapid-layout evidence rather than presenting it as a lead case study."
+          ],
+          images: [
+            { src: "assets/projects/babys-first-tower-defence/layout-2d-plan.jpg", alt: "Annotated 2D plan for the snow arena", caption: "2D intent: arena boundary, enemy paths, landmarks and elevation." },
+            { src: "assets/projects/babys-first-tower-defence/v2-blockout-ground.jpg", alt: "Ground-level snow arena blockout", caption: "Ground-level blockout: terrain and props break the open field into approaches." },
+            { src: "assets/projects/babys-first-tower-defence/v2-arena-overview.jpg", alt: "Aerial overview of the snow arena", caption: "Arena overview: central landmark and contained terrain bowl." }
+          ]
+        },
+        {
+          heading: "Evidence boundary",
+          body: [
+            "The images support rapid 2D-to-3D prototyping and landmark intent. They do not demonstrate strong encounter balance, aim-range fairness or tested lane coverage, so those claims are deliberately omitted."
+          ]
+        }
+      ],
+      credits: {
+        "My work": "2D arena layout and Level Design blockout intent.",
+        "Team work": "Gameplay, art, systems, audio and the final team prototype were shared work.",
+        "Third-party / marketplace assets": "Final-build art is not claimed as Advitiya's work.",
+        "Client or brief context": "Two-week Abertay academic game jam; no external client or commercial-employment claim."
+      }
+    },
+    {
+      slug: "tlou-dam-level",
+      tier: "archive",
+      badge: "Further work · personal blockout study",
+      title: "The Dam",
+      subtitle: "A two-week singleplayer greybox exercise in beat order and environmental framing",
+      description: "Earlier solo UE5 blockout study showing a bubble diagram, fast greybox production and environmental framing without unsupported encounter claims.",
+      hero: "assets/projects/tlou-dam-level/bubble-diagram.jpg",
+      heroAlt: "Bubble diagram for The Dam route and beats",
+      video: "b7awn57DIU8",
+      summary: {
+        Context: "Personal, TLoU-inspired spatial study",
+        Role: "Level Designer · solo",
+        Engine: "Unreal Engine 5",
+        Duration: "2 weeks; first greybox pass in 7 days",
+        Ownership: "Beat diagram, route, blockout and environmental framing",
+        Focus: "Fast iteration, traversal rhythm and destination readability",
+        "Evidence gap": "No enemy setup, cover map, playable proof or external test evidence is supplied"
+      },
+      skills: ["Beat mapping", "Rapid greybox", "Environmental framing", "Traversal rhythm"],
+      links: [],
+      sections: [
+        {
+          heading: "Constraint and plan",
+          body: [
+            "The exercise set a two-week limit and aimed to establish the main greybox scale in seven days. The bubble diagram sequences introduction, traversal, detour and escalation before geometry."
+          ],
+          images: [
+            { src: "assets/projects/tlou-dam-level/bubble-diagram.jpg", alt: "Bubble diagram for The Dam route and beats", caption: "Beat diagram made before the UE5 blockout." }
+          ]
+        },
+        {
+          heading: "Environmental framing study",
+          body: [
+            "Fence openings, contrast and street geometry are used as intended route frames. With no external test or implemented encounter evidence, the page does not claim proven stealth, combat or encounter design."
+          ],
+          images: [
+            { src: "assets/projects/tlou-dam-level/street-canyon.jpg", alt: "UE5 greybox street forming a visual channel toward the next area in The Dam", caption: "Street geometry narrows the view and frames the next destination before the player reaches the turn." },
+            { src: "assets/projects/tlou-dam-level/fence-framing.jpg", alt: "UE5 greybox fence opening used to frame the route in The Dam", caption: "The fence opening creates a controlled view of the route beyond without claiming a tested encounter outcome." },
+            { src: "assets/projects/tlou-dam-level/sunset-approach.jpg", alt: "UE5 greybox approach using warm sky contrast to frame the destination in The Dam", caption: "The approach uses the skyline and warm background contrast to make the destination easier to pick out." }
+          ]
+        }
+      ],
+      credits: {
+        "My work": "Beat diagram, route, UE5 blockout and environmental framing.",
+        "Team work": "Solo Level Design study; no team-production claim.",
+        "Third-party / marketplace assets": "The Last of Us is referenced only as genre inspiration; no affiliation is claimed. Contextual visual assets are not claimed as Advitiya's art work.",
+        "Client or brief context": "Self-directed personal project with no commercial client."
+      }
     }
-
-    /* ---- Tiers: "professional" | "studio" | "abertay" | "personal" ----
-       To add a project: copy any block above, change the slug,
-       drop images in assets/projects/<slug>/, set the tier.        */
   ]
 };
