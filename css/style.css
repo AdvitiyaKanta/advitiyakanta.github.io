@@ -167,21 +167,25 @@ body.menu-open .menu-btn span:last-child  { transform: translateY(-3.25px) rotat
 body.menu-open .menu-btn { border-color: var(--nav-on); }
 
 .menu-panel {
-  display: none; flex-direction: column;
+  /* This is also a <nav> inside <header>, so reset the flex values it would
+     otherwise inherit from the desktop `header nav` rule. */
+  display: none; flex-direction: column; align-items: stretch; gap: 0;
+  text-align: left;
   border-top: 1px solid var(--line);
   background: color-mix(in srgb, var(--bg) 96%, transparent);
   backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
   padding: 6px var(--gut) 14px;
 }
 .menu-panel a {
+  display: block;
   color: var(--text); font-size: 1.06rem; font-weight: 500;
   padding: 15px 0; border-bottom: 1px solid var(--line);
 }
 .menu-panel a:last-child { border-bottom: 0; }
 
 @media (max-width: 700px) {
-  header nav { gap: 14px; }
-  header nav a:not(.cv):not([aria-label]) { display: none; }
+  header .bar nav { gap: 14px; }
+  header .bar nav a:not(.cv):not([aria-label]) { display: none; }
   .brand { font-size: 0.95rem; }
   .menu-btn { display: flex; }
   body.menu-open .menu-panel { display: flex; animation: menuIn 0.24s ease both; }
@@ -194,8 +198,8 @@ body.menu-open .menu-btn { border-color: var(--nav-on); }
 }
 
 @media (max-width: 560px) {
-  header nav a[aria-label], header nav .cv { display: none; }
-  header nav { gap: 10px; }
+  header .bar nav a[aria-label], header .bar nav .cv { display: none; }
+  header .bar nav { gap: 10px; }
   header.site .bar { height: 70px; }
   .brand { max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 }

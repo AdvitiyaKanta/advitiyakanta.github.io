@@ -58,12 +58,6 @@ const SITE = {
             { src: "assets/projects/revolver-rift/compound-05.jpg", alt: "Waterside compound greybox with buildings across uneven terrain", caption: "Waterside compound: terrain and water define the approach before the building mass takes over." },
             { src: "assets/projects/revolver-rift/compound-06.jpg", alt: "Fort compound greybox with wall and gate", caption: "Fort compound: the perimeter wall makes the main gate immediately legible while preserving vertical route options." }
           ]
-        },
-        {
-          heading: "Result and next proof",
-          body: [
-            "The placement is Advitiya's strongest professional credential: sustained Level Design work in a studio pipeline on an in-development commercial title. Because process proof is NDA-limited, the most valuable future addition is one explicitly approved brief-to-revision strip and a short player-eye run."
-          ]
         }
       ],
       credits: {
@@ -207,7 +201,7 @@ const SITE = {
       credits: {
         "My work": "Player-space planning, bubble diagram and layouts, every playable-space blockout, spatial integration, chase flow, spline/trigger placement and trap placement.",
         "Team work": "Puzzle Design and LDD co-authorship, Entity/HUD code, lighting execution, modular art, props, UI, decals and audio had separate owners.",
-        "Third-party / marketplace assets": "Final-build captures contain team and project assets; Advitiya's claim is limited to the spatial work and implementation boundaries described here.",
+        "Third-party / marketplace assets": "Final-build captures contain team and project assets. My claim is limited to the spatial work and implementation boundaries described here.",
         "Client or brief context": "Abertay MProf academic team project responding to a Hyper Luminal Games client brief. This was not employment at Hyper Luminal Games."
       }
     },
@@ -287,7 +281,7 @@ const SITE = {
       credits: {
         "My work": "Lead Level Design for the top-deck route, blockout, pacing, NPC placement, documentation, playtest synthesis and the Audio Lead scope described above.",
         "Team work": "Another designer shared Level Design/interactable coverage; programming, 3D art, core game systems and music were team-owned.",
-        "Third-party / marketplace assets": "Final-build captures include team and project assets; only Advitiya's spatial, documentation, test-synthesis and specified audio work is claimed.",
+        "Third-party / marketplace assets": "Final-build captures include team and project assets. I claim only the spatial, documentation, test-synthesis and audio work described above.",
         "Client or brief context": "Abertay MProf academic team project created to a V&A Dundee brief. This was not employment at V&A Dundee or a permanent installation."
       }
     },
@@ -346,7 +340,7 @@ const SITE = {
       credits: {
         "My work": "Room layout, Level Design blockout, fixed-view readability and pacing support described above.",
         "Team work": "Gameplay systems, characters, final art, UI, audio and the wider prototype were team-owned.",
-        "Third-party / marketplace assets": "Final-build visuals are not presented as Advitiya's art work; the claim is limited to Level Design.",
+        "Third-party / marketplace assets": "Final-build visuals are not my art work. My claim is limited to Level Design.",
         "Client or brief context": "Abertay MProf academic team prototype with no external client employment claim."
       }
     },
@@ -397,7 +391,7 @@ const SITE = {
       credits: {
         "My work": "Reference selection, paper plan, route structure and UE5 blockout.",
         "Team work": "Solo Level Design study; no team-production claim.",
-        "Third-party / marketplace assets": "Advitiya owns the self-directed study and every image published here; no client or team ownership is implied.",
+        "Third-party / marketplace assets": "I own the self-directed study and every image published here. No client or team ownership is implied.",
         "Client or brief context": "Self-directed personal project with no commercial client."
       }
     },
@@ -446,7 +440,7 @@ const SITE = {
       credits: {
         "My work": "Paper plan, objective flow, blockout and lighting/composition intent.",
         "Team work": "Solo Level Design study; no team-production claim.",
-        "Third-party / marketplace assets": "Any final visual assets are contextual and not claimed as Advitiya's 3D art work.",
+        "Third-party / marketplace assets": "Any final visual assets are contextual and are not claimed as my 3D art work.",
         "Client or brief context": "Self-directed personal project with no commercial client."
       }
     },
@@ -495,7 +489,7 @@ const SITE = {
       credits: {
         "My work": "2D arena layout and Level Design blockout intent.",
         "Team work": "Gameplay, art, systems, audio and the final team prototype were shared work.",
-        "Third-party / marketplace assets": "Final-build art is not claimed as Advitiya's work.",
+        "Third-party / marketplace assets": "Final-build art is not claimed as my work.",
         "Client or brief context": "Two-week Abertay academic game jam; no external client or commercial-employment claim."
       }
     },
@@ -545,7 +539,7 @@ const SITE = {
       credits: {
         "My work": "Beat diagram, route, UE5 blockout and environmental framing.",
         "Team work": "Solo Level Design study; no team-production claim.",
-        "Third-party / marketplace assets": "The Last of Us is referenced only as genre inspiration; no affiliation is claimed. Contextual visual assets are not claimed as Advitiya's art work.",
+        "Third-party / marketplace assets": "The Last of Us is referenced only as genre inspiration; no affiliation is claimed. Contextual visual assets are not claimed as my art work.",
         "Client or brief context": "Self-directed personal project with no commercial client."
       }
     }
