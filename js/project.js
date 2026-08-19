@@ -36,11 +36,16 @@
     );
   }
 
+  function isTall(src) {
+    if (typeof IMAGE_META === "undefined" || !IMAGE_META[src]) return false;
+    return IMAGE_META[src][1] / IMAGE_META[src][0] > 0.8;
+  }
+
   function figureHTML(image, fallbackAlt) {
     var caption = image.caption || "";
     var alt = image.alt || caption || fallbackAlt;
     return (
-      "<figure class=\"shot\">" +
+      "<figure class=\"shot" + (isTall(image.src) ? " tall" : "") + "\">" +
         "<button class=\"zoom-button\" type=\"button\" data-lightbox-src=\"" + escapeHTML(image.src) +
           "\" data-lightbox-alt=\"" + escapeHTML(alt) + "\" aria-label=\"Open larger image: " + escapeHTML(alt) + "\">" +
           imageHTML(image.src, alt, "lazy") +
@@ -83,58 +88,31 @@
       return "<th scope=\"col\">" + escapeHTML(value) + "</th>";
     }).join("");
     var rows = table.rows.map(function (row) {
-      return "<tr>" + row.map(function (value) {
-        return "<td>" + escapeHTML(value) + "</td>";
+      return "<tr>" + row.map(function (value, column) {
+        return "<td data-label=\"" + escapeHTML(table.headers[column] || "") + "\">" +
+          escapeHTML(value) + "</td>";
       }).join("") + "</tr>";
     }).join("");
     return (
-      "<div class=\"table-wrap\" tabindex=\"0\" aria-label=\"Scrollable table: " + escapeHTML(heading) + "\">" +
+      "<div class=\"table-wrap\" tabindex=\"0\" role=\"group\" aria-label=\"Table: " + escapeHTML(heading) + "\">" +
       "<table><thead><tr>" + head + "</tr></thead><tbody>" + rows + "</tbody></table></div>"
     );
   }
 
-  function renderToggle(toggle, sectionIndex, project) {
-    if (!toggle) return "";
-    var groupId = "comparison-" + sectionIndex;
-    var keys = Object.keys(toggle);
-    var tabs = keys.map(function (key, index) {
-      var tabId = groupId + "-tab-" + key;
-      var panelId = groupId + "-panel-" + key;
-      return (
-        "<button type=\"button\" class=\"tg-btn" + (index === 0 ? " on" : "") + "\"" +
-        " id=\"" + tabId + "\" role=\"tab\" aria-controls=\"" + panelId + "\"" +
-        " aria-selected=\"" + (index === 0 ? "true" : "false") + "\" tabindex=\"" + (index === 0 ? "0" : "-1") + "\">" +
-        escapeHTML(toggle[key].name) + "</button>"
-      );
+  function renderSteps(steps) {
+    if (!steps || !steps.length) return "";
+    var items = steps.map(function (step) {
+      return "<li>" + escapeHTML(step) + "</li>";
     }).join("");
-    var panels = keys.map(function (key, index) {
-      var tabId = groupId + "-tab-" + key;
-      var panelId = groupId + "-panel-" + key;
-      var figures = (toggle[key].items || []).map(function (image) {
-        return figureHTML(image, project.title + " " + toggle[key].name + " view");
-      }).join("");
-      return (
-        "<div class=\"tg-pane" + (index === 0 ? " on" : "") + "\" id=\"" + panelId + "\" role=\"tabpanel\"" +
-        " aria-labelledby=\"" + tabId + "\"" + (index === 0 ? "" : " hidden") + ">" + figures + "</div>"
-      );
-    }).join("");
-    return "<div class=\"tg\"><div class=\"tg-bar\" role=\"tablist\" aria-label=\"View comparison\">" + tabs + "</div>" + panels + "</div>";
+    return "<ol class=\"process\" aria-label=\"Process sequence\">" + items + "</ol>";
   }
 
-  function renderGallery(gallery, project) {
-    if (!gallery || !gallery.length) return "";
-    var items = gallery.map(function (item, index) {
-      var source = typeof item === "string" ? item : item.src;
-      var alt = typeof item === "string"
-        ? project.title + " in-engine level-design view " + (index + 1)
-        : (item.alt || item.caption || project.title + " level-design view " + (index + 1));
-      return (
-        "<button class=\"zoom-button gallery-item\" type=\"button\" data-lightbox-src=\"" + escapeHTML(source) +
-        "\" data-lightbox-alt=\"" + escapeHTML(alt) + "\" aria-label=\"Open larger image: " + escapeHTML(alt) + "\">" +
-        imageHTML(source, alt, "lazy") + "</button>"
-      );
+  function renderGrid(grid, project) {
+    if (!grid || !grid.length) return "";
+    var figures = grid.map(function (image) {
+      return figureHTML(image, project.title + " level-design evidence");
     }).join("");
-    return "<div class=\"gallery\">" + items + "</div>";
+    return "<div class=\"figure-grid\">" + figures + "</div>";
   }
 
   function renderSection(section, index, project) {
@@ -147,12 +125,13 @@
     var figures = (section.images || []).map(function (image) {
       return figureHTML(image, project.title + " level-design evidence");
     }).join("");
+    var variant = section.variant ? " " + escapeHTML(section.variant) : "";
     return (
-      "<section class=\"case-section\" aria-labelledby=\"section-" + index + "\">" +
+      "<section class=\"case-section" + variant + "\" aria-labelledby=\"section-" + index + "\">" +
         "<h2 id=\"section-" + index + "\">" + escapeHTML(section.heading) + "</h2>" +
-        body + (bullets ? "<ul class=\"case-list\">" + bullets + "</ul>" : "") +
-        renderTable(section.table, section.heading) + figures +
-        renderToggle(section.toggle, index, project) + renderGallery(section.gallery, project) +
+        renderSteps(section.steps) + body +
+        (bullets ? "<ul class=\"case-list\">" + bullets + "</ul>" : "") +
+        renderTable(section.table, section.heading) + figures + renderGrid(section.grid, project) +
       "</section>"
     );
   }
@@ -165,39 +144,6 @@
         "<p>" + escapeHTML(project.credits[label]) + "</p></div>"
       );
     }).join("");
-  }
-
-  function initialiseTabs() {
-    document.querySelectorAll("[role=\"tablist\"]").forEach(function (tabList) {
-      var tabs = Array.from(tabList.querySelectorAll("[role=\"tab\"]"));
-      function selectTab(selected) {
-        tabs.forEach(function (tab) {
-          var isSelected = tab === selected;
-          tab.classList.toggle("on", isSelected);
-          tab.setAttribute("aria-selected", isSelected ? "true" : "false");
-          tab.tabIndex = isSelected ? 0 : -1;
-          var panel = document.getElementById(tab.getAttribute("aria-controls"));
-          if (panel) {
-            panel.classList.toggle("on", isSelected);
-            panel.hidden = !isSelected;
-          }
-        });
-      }
-      tabs.forEach(function (tab, index) {
-        tab.addEventListener("click", function () { selectTab(tab); });
-        tab.addEventListener("keydown", function (event) {
-          var nextIndex = index;
-          if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % tabs.length;
-          else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + tabs.length) % tabs.length;
-          else if (event.key === "Home") nextIndex = 0;
-          else if (event.key === "End") nextIndex = tabs.length - 1;
-          else return;
-          event.preventDefault();
-          selectTab(tabs[nextIndex]);
-          tabs[nextIndex].focus();
-        });
-      });
-    });
   }
 
   function closeLightbox() {
@@ -264,10 +210,10 @@
       document.title = "Project not found · " + SITE.name;
       document.getElementById("project-hero").innerHTML =
         "<p class=\"label\">Project index</p><h1>Choose a case study</h1>" +
-        "<p class=\"subtitle\">This compatibility URL needs a valid project name.</p>";
+        "<p class=\"subtitle\">This URL needs a valid project name.</p>";
       document.getElementById("case").innerHTML =
-        "<section class=\"case-section\"><h2>Selected work</h2><p>Use the selected-work page to open a stable, shareable project URL.</p>" +
-        "<p><a class=\"button primary\" href=\"" + escapeHTML(pagePath("index.html#selected-work")) + "\">View selected work</a></p></section>";
+        "<section class=\"case-section\"><h2>Selected work</h2><p>Use the work page to open a stable, shareable project URL.</p>" +
+        "<p><a class=\"button primary\" href=\"" + escapeHTML(pagePath("index.html#work")) + "\">View selected work</a></p></section>";
       document.getElementById("project-summary").hidden = true;
       document.getElementById("project-links").hidden = true;
       document.getElementById("credits").hidden = true;
@@ -275,11 +221,6 @@
       return;
     }
     document.title = project.title + " · " + SITE.name;
-
-    var backdrop = document.createElement("div");
-    backdrop.className = "backdrop";
-    backdrop.style.backgroundImage = "url(\"" + imagePath(project.hero) + "\")";
-    document.body.prepend(backdrop);
 
     document.getElementById("project-hero").innerHTML =
       "<p class=\"label\">" + escapeHTML(project.badge) + "</p>" +
@@ -325,7 +266,6 @@
       "<a href=\"" + escapeHTML(pagePath("work/" + previous.slug + "/")) + "\"><span aria-hidden=\"true\">←</span> " + escapeHTML(previous.title) + "</a>" +
       "<a href=\"" + escapeHTML(pagePath("work/" + next.slug + "/")) + "\">" + escapeHTML(next.title) + " <span aria-hidden=\"true\">→</span></a>";
 
-    initialiseTabs();
     initialiseLightbox();
     initialiseVideo(project);
   }

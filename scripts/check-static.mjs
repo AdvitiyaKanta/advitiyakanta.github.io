@@ -124,9 +124,8 @@ for (const reference of dataAssetReferences) {
 for (const project of SITE.projects) {
   const generated = path.join(root, "work", project.slug, "index.html");
   if (!fs.existsSync(generated)) fail(`Missing generated page for ${project.slug}`);
-  if (!project.credits || !project.credits["My work"] || !project.credits["Team work"] ||
-      !project.credits["Third-party / marketplace assets"] || !project.credits["Client or brief context"]) {
-    fail(`${project.slug}: incomplete credits/attribution block`);
+  if (!project.credits || !project.credits["My work"] || !project.credits["Context"]) {
+    fail(`${project.slug}: credits must state "My work" and "Context"`);
   }
 }
 

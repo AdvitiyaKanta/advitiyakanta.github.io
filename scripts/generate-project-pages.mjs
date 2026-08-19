@@ -27,7 +27,7 @@ function replaceMeta(html, selector, value) {
 for (const project of SITE.projects) {
   const canonical = `${baseUrl}/work/${project.slug}/`;
   const socialImage = `${baseUrl}/${project.hero}`;
-  const title = `${project.title} · Level Design Case Study`;
+  const title = `${project.title} | Advitiya Singh Kanta, Level Designer`;
   const description = project.description;
   let html = template;
 

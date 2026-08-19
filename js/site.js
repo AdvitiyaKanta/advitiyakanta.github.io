@@ -4,19 +4,20 @@
   "use strict";
 
   var body = document.body;
+  var themeButtons = Array.prototype.slice.call(document.querySelectorAll("[data-theme-toggle]"));
   var themeButton = document.getElementById("themeBtn");
+  if (themeButton && themeButtons.indexOf(themeButton) === -1) themeButtons.push(themeButton);
   var menuButton = document.getElementById("menuBtn");
   var menuPanel = document.getElementById("menuPanel");
 
   function setTheme(isLight) {
     body.classList.toggle("light", isLight);
-    if (themeButton) {
-      themeButton.setAttribute(
-        "aria-label",
-        isLight ? "Switch to dark colour theme" : "Switch to light colour theme"
-      );
-      themeButton.setAttribute("aria-pressed", isLight ? "true" : "false");
-    }
+    themeButtons.forEach(function (control) {
+      var label = isLight ? "Switch to dark colour theme" : "Switch to light colour theme";
+      control.setAttribute("aria-label", label);
+      control.setAttribute("aria-pressed", isLight ? "true" : "false");
+      if (control.classList.contains("theme-toggle")) control.textContent = label;
+    });
   }
 
   var savedTheme = null;
@@ -27,8 +28,9 @@
   }
   setTheme(savedTheme === "light");
 
-  if (themeButton) {
-    themeButton.addEventListener("click", function () {
+  themeButtons.forEach(function (control) {
+    control.addEventListener("click", function (event) {
+      event.stopPropagation();
       var isLight = !body.classList.contains("light");
       setTheme(isLight);
       try {
@@ -37,7 +39,7 @@
         // Theme preference is optional when storage is unavailable.
       }
     });
-  }
+  });
 
   function setMenu(open) {
     body.classList.toggle("menu-open", open);
@@ -76,13 +78,13 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -40px 0px" }
     );
     document.querySelectorAll(".reveal").forEach(function (element) {
       revealObserver.observe(element);
     });
 
-    var hero = document.querySelector(".hero");
+    var hero = document.querySelector(".intro");
     if (hero) {
       new IntersectionObserver(
         function (entries) {
