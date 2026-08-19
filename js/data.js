@@ -132,7 +132,7 @@ const SITE = {
           ]
         },
         {
-          heading: "01 — Research and visual gathering",
+          heading: "01 · Research and visual gathering",
           steps: ["Research", "Paper plan", "2D layout", "Blockout", "Implementation", "QA", "Iteration"],
           body: [
             "Before planning the playable space, I gathered visual references for the major room types and spatial language I needed for the blockout: hibernation chamber, generator room, laboratory, entity experimentation room and the Underbelly.",
@@ -143,10 +143,10 @@ const SITE = {
           ]
         },
         {
-          heading: "02 — Paper planning",
+          heading: "02 · Paper planning",
           body: [
             "The sequence began on paper: room order, safe zones, storytelling rooms and the loop back to the starting chamber. Working by hand kept the whole route in view while it was still cheap to change.",
-            "Scope reduced twice — from five planned puzzle rooms to three at the client pitch, then to two later in production. I redrew the bubble diagram rather than patching an obsolete plan, so the critical path and ending loop stayed legible to the rest of the team."
+            "Scope reduced twice: from five planned puzzle rooms to three at the client pitch, then to two later in production. I redrew the bubble diagram rather than patching an obsolete plan, so the critical path and ending loop stayed legible to the rest of the team."
           ],
           grid: [
             { src: "assets/projects/to-pierce-eternity/layout-paper.jpg", alt: "Hand-drawn room sequence and route plan for To Pierce Eternity", caption: "Paper pass: room order, safe zones, storytelling rooms and the loop back to the start." },
@@ -154,7 +154,7 @@ const SITE = {
           ]
         },
         {
-          heading: "03 — 2D spatial layout",
+          heading: "03 · 2D spatial layout",
           body: [
             "The digital plan fixed the critical path, room types and the no-backtracking thresholds marked in red. Crossing one seals the route behind the player, which protects forward momentum and makes the final choice binding.",
             "Room-level plans carried the detail the overview could not: where an interaction sits, what blocks a sightline, and which detours are optional."
@@ -170,7 +170,7 @@ const SITE = {
           ]
         },
         {
-          heading: "04 — Blockout",
+          heading: "04 · Blockout",
           body: [
             "The blockout grew from one hibernation chamber into the full playable route. By Week 8 every playable space was blocked out; from Week 9 I held the spatial intent while team-owned art, props and lighting replaced the greybox.",
             "The sightline study below was made before geometry existed. Pods frame a central object from the entrance, and the finished room keeps that hierarchy, so curiosity rather than an objective marker pulls the player forward."
@@ -188,7 +188,7 @@ const SITE = {
           ]
         },
         {
-          heading: "05 — Implementation",
+          heading: "05 · Implementation",
           body: [
             "I planned the Underbelly chase on paper, built its spatial flow, placed the traps, and positioned the spline and trigger beats that drive it. Chase flow was implemented with Level Blueprint, splines and trigger volumes.",
             "For early elevator-to-Underbelly timing I built a small Level Blueprint prototype using paired trigger volumes, player checks and Set Actor Location, so pacing could be tested before the final elevator existed. Entity behaviour and HUD systems were programming-owned."
@@ -203,7 +203,7 @@ const SITE = {
           ]
         },
         {
-          heading: "06 — QA and playtesting",
+          heading: "06 · QA and playtesting",
           body: [
             "On 7 July a Hyper Luminal Games QA tester found that three identical doors in a symmetrical safe room gave no defensible route choice. An objective marker would have solved it, but the marker would have travelled through the HUD the player is not supposed to trust.",
             "A 24 July external test exposed a second problem: sprinting straight through the Underbelly bypassed the chase read entirely."
@@ -218,7 +218,7 @@ const SITE = {
           }
         },
         {
-          heading: "07 — Iteration",
+          heading: "07 · Iteration",
           body: [
             "I changed the environment rather than the interface. Placeholder door lighting communicated open and blocked states, one distinction object per safe room broke the symmetry, and the same rule went into the maintenance path using pipes as leading lines with colour only as reinforcement.",
             "I would refuse the objective marker again. When interface reliability is the mechanic, the trustworthy information has to live in the space instead."
@@ -232,7 +232,7 @@ const SITE = {
           heading: "How I collaborated",
           body: [
             "I worked to other people's designs as well as my own. Puzzle design had a separate owner, and where a concept came from someone else I blocked it out and integrated it into the playable space rather than redrawing it around my plan.",
-            "The scope cut and the QA findings both came from outside my own judgement, and both changed the level. Discussing intent early — what a room is for, what the player should read first — made those conversations quick enough to act on inside the schedule."
+            "The scope cut and the QA findings both came from outside my own judgement, and both changed the level. Discussing intent early, about what a room is for and what the player should read first, made those conversations quick enough to act on inside the schedule."
           ]
         }
       ],
