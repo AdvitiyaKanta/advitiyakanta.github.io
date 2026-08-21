@@ -173,7 +173,8 @@ const SITE = {
           heading: "04 · Blockout",
           body: [
             "The blockout grew from one hibernation chamber into the full playable route. By Week 8 every playable space was blocked out; from Week 9 I held the spatial intent while team-owned art, props and lighting replaced the greybox.",
-            "The sightline study below was made before geometry existed. Pods frame a central object from the entrance, and the finished room keeps that hierarchy, so curiosity rather than an objective marker pulls the player forward."
+            "The sightline study below was made before geometry existed. Pods frame a central object from the entrance, and the finished room keeps that hierarchy, so curiosity rather than an objective marker pulls the player forward.",
+            "Revelation beats were one of the project's core design pillars, and the blockout is where they were staged. I sequenced the route so that what the player interacts with and what changes as a result are not in the same place. In the pair below, the cable on the floor leads the eye to the power terminal and the interaction prompt sits there, but the hatch it opens is off to the side, so the player has to re-read the room rather than watch a panel change."
           ],
           images: [
             { src: "assets/projects/to-pierce-eternity/sightline-plan.jpg", alt: "Sightline plan beside the completed Entity Experimentation Room showing matching framing", caption: "Plan against execution: pod placement frames the centre object, and one readable light source carries the entrance sightline." }
@@ -185,6 +186,9 @@ const SITE = {
             { src: "assets/projects/to-pierce-eternity/blockout-both-wings.jpg", alt: "Top-down blockout showing the station's two wings connected after the plan revision", caption: "Both wings connected after the plan revision." },
             { src: "assets/projects/to-pierce-eternity/blockout-full-station.jpg", alt: "Top-down blockout of the complete station with every playable room in place, including the Entity Experimentation Room", caption: "Every playable room blocked out, including the Entity Experimentation Room." },
             { src: "assets/projects/to-pierce-eternity/blockout-underbelly.jpg", alt: "Underbelly blockout: modular corridors with a spline path traced through the chase route", caption: "Full Underbelly playable area blocked out using the modular kit, testing the spline and entity movement through the chase sequence." }
+          ],
+          tailImages: [
+            { src: "assets/projects/to-pierce-eternity/revelation-beat-hud.jpg", alt: "Side-by-side view of a station room: the power terminal highlighted with a cable leading toward it, then the same view after interaction with a hexagonal hatch open beside it", caption: "Revelation beat: the cable leads the eye to the terminal, and interacting with it opens the hatch to the side of where the player is looking." }
           ]
         },
         {
@@ -286,6 +290,17 @@ const SITE = {
           ]
         },
         {
+          heading: "Spatial planning",
+          body: [
+            "Before any layout work I planned the route over a reference image of the ship: the player start, the path forward, the stairs, the primary landmark, and the areas to close off.",
+            "Three constraints shaped it. The experience had to run at roughly five minutes. A large part of the audience was older visitors who could not walk the whole museum, so the route had to be short, level and undemanding. And it had to arrive at the balcony in a way that felt like a walk along a ship rather than a corridor with a destination at the end.",
+            "Marking restricted and negative space this early mattered as much as marking the path. Deciding where the player could not go is what allowed the open deck to stay open."
+          ],
+          images: [
+            { src: "assets/projects/hull-and-horizon/spatial-planning-annotated.jpg", alt: "Hand-annotated reference image of the RMS Queen Mary marking the player path, primary landmark, stairs and restricted space", caption: "Route, landmark, stairs and restricted space marked over a reference image of the ship before layout work began." }
+          ]
+        },
+        {
           heading: "Design",
           steps: ["Design", "Blockout", "Observation", "Findings", "Iteration"],
           body: [
@@ -294,10 +309,23 @@ const SITE = {
           ],
           images: [
             { src: "assets/projects/hull-and-horizon/layout-topdeck-plan.jpg", alt: "Annotated 2D top-deck plan marking the main route, points of interest, NPC positions and restricted areas", caption: "Top-deck plan: main route, points of interest, NPC positions and restricted areas, set before blockout." },
-            { src: "assets/projects/hull-and-horizon/read-topdeck-goldenpath.jpg", alt: "Annotated top-deck greybox tracing the intended golden path", caption: "The intended route, and how stairs, deck edges and landmark placement keep it legible." },
-            { src: "assets/projects/hull-and-horizon/read-pov-forward.jpg", alt: "Annotated player view along the deck showing landmark order", caption: "Forward player view: which landmarks appear first, and how the ship silhouette pulls attention along the deck." },
-            { src: "assets/projects/hull-and-horizon/read-focal-corridor.jpg", alt: "Annotated greybox corridor showing focal hierarchy and leading lines", caption: "Interior corridor: wall edges, contrast and the opening ahead direct the view toward the next space." }
+            { src: "assets/projects/hull-and-horizon/read-topdeck-goldenpath.jpg", alt: "Annotated top-down view of the top deck marking the golden path, the mast as central anchor, soft boundaries and interactable clusters", caption: "Top deck: the golden path, the mast as central anchor, and soft boundaries that restrict without walls." },
+            { src: "assets/projects/hull-and-horizon/read-pov-forward.jpg", alt: "Annotated forward player view marking the mast as primary landmark, silhouette hierarchy, layered elevation and leading lines", caption: "Forward silhouette: mast, funnel and superstructure stack against the sky so the space parses in one look." },
+            { src: "assets/projects/hull-and-horizon/read-focal-corridor.jpg", alt: "Annotated interior corridor showing architecture converging on an NPC at the vanishing point, diegetic signage and light used as a lure", caption: "Interior corridor: architecture converges on the NPC at the vanishing point, with light at the far end pulling the player through." }
           ]
+        },
+        {
+          heading: "Level beats",
+          body: [
+            "With the layout fixed, I mapped the experience as a sequence of nine beats: arrival at the bow, the work area, meeting Sir John Brown, the stairs down, the lower corridor, the builder encounter, the return upstairs, the first-class lounge and the final view.",
+            "The beat map is what kept the five-minute target honest. It sets how long the player spends in each space, alternates open deck against enclosed interior, and places every NPC encounter where the route needs a reason to keep going rather than an instruction.",
+            "It also fixed the order of discovery. Brown points toward the lower passage, so the stairs read as an invitation rather than a dead end, and the lounge lands last because the experience should end on a view instead of a task."
+          ],
+          beatMap: {
+            src: "assets/projects/hull-and-horizon/level-beat-map.jpg",
+            alt: "Hull and Horizon beat flow diagram listing nine numbered beats from deck entry through the work area, inspection, stairs, lower corridor, builder room, stair exit and first-class lounge to the final view",
+            label: "See beat map"
+          }
         },
         {
           heading: "Playtesting and observation",
@@ -395,19 +423,59 @@ const SITE = {
           ]
         },
         {
+          heading: "Level beats",
+          body: [
+            "Before building the space I wrote the level out beat by beat: what happens at each point of progression, where the player's focus should sit, and what each beat is there to teach or to pressure.",
+            "With the player seated and the camera fixed, pacing had to come from events rather than movement. The map schedules the slap rounds against the baby-management loop, the fly events and the cuckoo clock, keeping demands apart early on and deliberately overlapping them toward the finale.",
+            "The blockout was built to serve this structure. Everything in the room had to sit where the beat scheduled for that moment stays readable from the player's seat."
+          ],
+          beatMap: {
+            src: "assets/projects/goodbabies/level-beat-map.jpg",
+            alt: "GoodBabies beat-to-beat map listing progression percentage, event, player focus and design intent for every beat of a round",
+            label: "See beat map"
+          }
+        },
+        {
           heading: "Blockout",
           body: [
-            "The room moved from massing to a dressed team build in a short iteration sequence. The table stayed the visual anchor, furniture broke long sightlines, and the bouncer route was drawn and walked before any character implementation existed."
+            "The room moved from massing to a dressed team build in a short iteration sequence. The table stayed the visual anchor, furniture broke long sightlines, and the bouncer route was drawn and walked before any character implementation existed.",
+            "The progression below puts each blocked-out space beside the dressed build that replaced it. The framed composition is what had to survive that handover."
           ],
           grid: [
             { src: "assets/projects/goodbabies/blockout-day2.jpg", alt: "Day 2 GoodBabies room blockout showing table anchor and furniture massing", caption: "Day 2: table anchor and furniture massing." },
             { src: "assets/projects/goodbabies/blockout-day3-patrol.jpg", alt: "Bouncer patrol route drawn on the GoodBabies blockout floor", caption: "Day 3: patrol route tested as spatial pressure before character implementation." }
+          ],
+          tailImages: [
+            { src: "assets/projects/goodbabies/blockout-progression.jpg", alt: "Three GoodBabies blockout views above the dressed team build of each corresponding space", caption: "Blockout to dressed build across the level's spaces." }
+          ]
+        },
+        {
+          heading: "Reading the room from the player's seat",
+          body: [
+            "With the camera fixed, the frame is the level. I annotated the player's view to check that the primary interaction, the narrative anchor and the threat all resolve in a single read.",
+            "The table holds the centre of the frame because that is where the gameplay rhythm sits. The Don sits directly ahead as the narrative anchor, with the other opponents flanking him. The left side is kept low in visual noise so nothing pulls the eye off the table, and the background is dimmed to hold contrast on the cards.",
+            "The bouncer is the pressure. He is placed deep in the frame rather than near the table, so he registers as a constant threat without competing with the interaction for attention. Red light, a long cast shadow and the pointed bunting above him carry that read at the edge of vision."
+          ],
+          images: [
+            { src: "assets/projects/goodbabies/read-player-pov.jpg", alt: "Annotated player view marking the primary interaction zone at the table, the Don as narrative anchor, secondary focus and threat signalling", caption: "Player POV: primary interaction zone, narrative anchor, secondary focus and threat signalling in one frame." },
+            { src: "assets/projects/goodbabies/read-bouncer-placement.jpg", alt: "Annotated view of the bouncer standing deep in the room under red light with a long cast shadow", caption: "Bouncer placement: distance, red light and shadow length build pressure without pulling focus from the table." }
+          ]
+        },
+        {
+          heading: "Fly events: implementation and balancing",
+          body: [
+            "The fly is a spline-driven distraction that the programming team built as a system. My work was the level-design side of it: where each fly enters, the shape of its path across the table, where it lands, and how long the player has before it costs them.",
+            "I placed and edited the splines in the level, then balanced the events against the beat map. The first fly is slow and alone; later ones move faster and eventually arrive in pairs, with landing spots varied so the path cannot be memorised.",
+            "Balancing meant testing the overlap. A fly during ordinary dialogue is a nuisance. A fly during an incriminating line forces a real choice between swatting and recording, and that is where the beat earns its place."
+          ],
+          images: [
+            { src: "assets/projects/goodbabies/fly-spline-implementation.jpg", alt: "Spline path being edited over the GoodBabies card table beside the resulting fly event during play", caption: "Editing the fly spline in the level, beside the event as it reads in play." }
           ]
         }
       ],
       credits: {
-        "My work": "Room layout, blockout, fixed-view readability and pacing support.",
-        "Team work": "Gameplay systems, characters, final art, UI and audio were team-owned.",
+        "My work": "Level beats, room layout, blockout, fixed-view readability, pacing, and the placement and balancing of the fly events.",
+        "Team work": "Gameplay systems, characters, final art, UI and audio were team-owned. The spline system driving the flies was built by the programming team; I authored the paths and the event balance inside it.",
         "Context": "Abertay MProf team prototype. No external client or commercial claim."
       }
     },
@@ -510,8 +578,8 @@ const SITE = {
       title: "Baby's First Tower Defence",
       subtitle: "A short arena study, kept as early rapid-layout evidence",
       description: "A two-week Unreal Engine 5 team jam project showing a 2D arena plan, terrain funnel intent and landmark-based readability.",
-      hero: "assets/projects/babys-first-tower-defence/layout-2d-plan.jpg",
-      heroAlt: "Annotated 2D snow-arena plan for Baby's First Tower Defence",
+      hero: "assets/projects/babys-first-tower-defence/cover.jpg",
+      heroAlt: "Player defending the snow arena with the tower health bars and enemy counter on screen",
       video: "-KdVIYtmypk",
       summary: {
         Role: "Level Designer",

@@ -115,6 +115,26 @@
     return "<div class=\"figure-grid\">" + figures + "</div>";
   }
 
+  function renderTail(images, project) {
+    if (!images || !images.length) return "";
+    return images.map(function (image) {
+      return figureHTML(image, project.title + " level-design evidence");
+    }).join("");
+  }
+
+  function renderBeatMap(beatMap) {
+    if (!beatMap) return "";
+    var alt = beatMap.alt || "Level beat map";
+    return (
+      "<p class=\"beatmap-cta\">" +
+        "<button class=\"beatmap-link\" type=\"button\" data-lightbox-src=\"" + escapeHTML(beatMap.src) +
+        "\" data-lightbox-alt=\"" + escapeHTML(alt) + "\">" +
+        escapeHTML(beatMap.label || "See beat map") +
+        " <span aria-hidden=\"true\">\u2192</span></button>" +
+      "</p>"
+    );
+  }
+
   function renderSection(section, index, project) {
     var body = (section.body || []).map(function (paragraph) {
       return "<p>" + escapeHTML(paragraph) + "</p>";
@@ -131,7 +151,9 @@
         "<h2 id=\"section-" + index + "\">" + escapeHTML(section.heading) + "</h2>" +
         renderSteps(section.steps) + body +
         (bullets ? "<ul class=\"case-list\">" + bullets + "</ul>" : "") +
+        renderBeatMap(section.beatMap) +
         renderTable(section.table, section.heading) + figures + renderGrid(section.grid, project) +
+        renderTail(section.tailImages, project) +
       "</section>"
     );
   }
